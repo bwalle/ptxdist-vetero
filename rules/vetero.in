@@ -1,0 +1,10 @@
+## SECTION=project_specific
+
+config VETERO
+	bool
+	prompt "vetero"
+	select HOST_CMAKE
+        select LIBCONFUSE
+	help
+	  FIXME
+

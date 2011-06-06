@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# veterod
+#
+
+VETEROD_OPTIONS="--error-logfile syslog"
+PIDFILE=/var/run/veterod.pid
+
+case $1 in
+
+    start)
+        echo "Starting veterod..."
+        start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
+        ;;
+
+    stop)
+        echo "Stopping veterod..."
+        start-stop-daemon -K -p "$PIDFILE"
+        ;;
+
+esac
+
+# vim: set sw=4 ts=4 et:

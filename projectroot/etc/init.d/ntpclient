@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# ntpclient
+#
+case $1 in
+
+	start)
+		echo "Setting the system time according to NTP..."
+		/usr/sbin/ntpclient -s -h @HOST@ > /dev/null &
+
+		echo "ntpclient starting"
+		/usr/sbin/ntpclient -i 600 -l -h @HOST@ > /dev/null &
+		;;
+
+esac
+
