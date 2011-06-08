@@ -55,12 +55,8 @@ $(STATEDIR)/vetero.targetinstall:
 	@$(call install_fixup, vetero, AUTHOR, "Bernhard Walle <bernhard@bwalle.de>")
 	@$(call install_fixup, vetero, DESCRIPTION, missing)
 
-#	# copy all binaries
-
-	@for i in $(shell cd $(VETERO_PKGDIR) && find bin sbin usr/bin usr/sbin -type f); do \
-		$(call install_copy, vetero, 0, 0, 0755, -, /$$i); \
-	done
-	$(call install_copy, vetero, 0, 0, 0644, -, /usr/share/current_weather.svg); \
+#	# copy all files
+	$(call install_tree, vetero, 0, 0, $(VETERO_PKGDIR), /)
 
 #	# install the init script
 	@$(call install_alternative, vetero, 0, 0, 0755, /etc/init.d/vetero)
