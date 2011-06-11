@@ -1530,7 +1530,7 @@ PTXCONF_OPENSSL_SHARED=y
 # PTXCONF_HEXEDIT is not set
 # PTXCONF_JED is not set
 # PTXCONF_JOE is not set
-# PTXCONF_NANO is not set
+PTXCONF_NANO=y
 
 #
 # System Libraries              
