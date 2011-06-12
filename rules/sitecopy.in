@@ -1,8 +1,8 @@
-## SECTION=project_specific
+## SECTION=networking
 
 config SITECOPY
 	tristate
 	prompt "sitecopy"
 	select LIBXML2
 	help
-	  FIXME
+	  Synchronize local and remote web site via FTP or WebDAV
