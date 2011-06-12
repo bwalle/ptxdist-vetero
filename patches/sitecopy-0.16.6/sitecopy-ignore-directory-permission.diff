@@ -1,0 +1,17 @@
+---
+ src/console_fe.c |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/src/console_fe.c
++++ b/src/console_fe.c
+@@ -1184,8 +1184,8 @@ static void init(int argc, char **argv)
+ 	printf(_("%s: You need to create this directory and set the permissions to 0700.\n"), progname);
+ 	break;
+     case RC_DIRPERMS:
+-	printf(_("%s: Error: storage directory permissions incorrect.\n"), progname);
+-	printf(_("%s: Set the permissions to 0700.\n"), progname);
++	/* ignore */
++	ret = 0;
+ 	break;
+     case RC_NETRCPERMS:
+ 	printf(_("%s: Error: ~/.netrc permissions incorrect.\n"), progname);
