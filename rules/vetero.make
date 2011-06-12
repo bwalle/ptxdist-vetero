@@ -34,13 +34,10 @@ $(VETERO_SOURCE):
 # Prepare
 # ----------------------------------------------------------------------------
 
-#VETERO_CONF_ENV	:= $(CROSS_ENV)
-
 #
 # cmake
 #
 VETERO_CONF_TOOL	:= cmake
-#VETERO_CONF_OPT	:= $(CROSS_CMAKE_USR)
 
 # ----------------------------------------------------------------------------
 # Target-Install
