@@ -1,0 +1,29 @@
+#!/bin/sh
+
+log()
+{
+    logger -p local0.notice -t veterobackup "$@"
+}
+
+if ! [ -r "/data/vetero.config" ] ; then
+    log "No /data/vetero.config found"
+    exit 0
+fi
+. /data/vetero.config
+
+if [ -z "$BACKUP_URL" ] ; then
+    log 'No "$BACKUP_URL" specified'
+    exit 0
+fi
+
+DATE=`date +%Y-%m-%dT%H:%M:%S`
+curl -s -T /data/vetero.db "$BACKUP_URL/vetero-$DATE.db"
+if [ $? -eq 0 ] ; then
+    log "Backup succeeded"
+else
+    log "Backup failed"
+fi
+
+exit 0
+
+# vim: set sw=4 ts=4 et:

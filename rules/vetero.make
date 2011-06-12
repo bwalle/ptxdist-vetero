@@ -63,6 +63,10 @@ $(STATEDIR)/vetero.targetinstall:
 
 	@$(call install_alternative, vetero, 0, 0, 0755, /etc/rc.once.d/0vetero)
 
+#	# Small backup script
+	@$(call install_alternative, vetero, 0, 0, 0755, /usr/sbin/veterobackup)
+	@$(call install_alternative, vetero, 0, 0, 0600, /var/spool/cron/crontabs/root)
+
 	@$(call install_finish, vetero)
 
 	@$(call touch)
