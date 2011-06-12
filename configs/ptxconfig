@@ -1258,7 +1258,276 @@ PTXCONF_BZIP2=y
 # PTXCONF_BZIP2_BZIP2RECOVER is not set
 # PTXCONF_BZIP2_LIBBZ2 is not set
 # PTXCONF_CONSOLEKIT is not set
-# PTXCONF_COREUTILS is not set
+PTXCONF_COREUTILS=y
+
+#
+# BusyBox' echo is selected!
+#
+
+#
+# BusyBox' stat is selected!
+#
+
+#
+# BusyBox' date is selected!
+#
+# PTXCONF_COREUTILS_HOSTID is not set
+
+#
+# BusyBox' uname is selected!
+#
+# PTXCONF_COREUTILS_DIRCOLORS is not set
+
+#
+# BusyBox' seq is selected!
+#
+
+#
+# BusyBox' nohup is selected!
+#
+PTXCONF_COREUTILS_GROUPS=y
+# PTXCONF_COREUTILS_SHA224SUM is not set
+
+#
+# busybox' expr is selected!
+#
+# PTXCONF_COREUTILS_TRUNCATE is not set
+# PTXCONF_COREUTILS_CHCON is not set
+
+#
+# busybox' printf is selected!
+#
+
+#
+# busybox' rmdir is selected!
+#
+
+#
+# busybox' printenv is selected!
+#
+# PTXCONF_COREUTILS_EXPAND is not set
+
+#
+# busybox' chmod is selected!
+#
+
+#
+# busybox' chown is selected!
+#
+# PTXCONF_COREUTILS_SHA512SUM is not set
+
+#
+# busybox' uniq is selected!
+#
+# PTXCONF_COREUTILS_INSTALL is not set
+
+#
+# busybox' tty is selected!
+#
+# PTXCONF_COREUTILS_SHA384SUM is not set
+
+#
+# busybox' cut is selected!
+#
+# PTXCONF_COREUTILS_SHRED is not set
+
+#
+# busybox' od is selected!
+#
+
+#
+# busybox' chgrp is selected!
+#
+# PTXCONF_COREUTILS_DIR is not set
+
+#
+# busybox' mkfifo is selected!
+#
+
+#
+# busybox' chroot is selected!
+#
+
+#
+# busybox' ln is selected!
+#
+
+#
+# busybox' sum is selected!
+#
+# PTXCONF_COREUTILS_USERS is not set
+
+#
+# busybox' touch is selected!
+#
+# PTXCONF_COREUTILS_PASTE is not set
+
+#
+# busybox' mknod is selected!
+#
+# PTXCONF_COREUTILS_TSORT is not set
+
+#
+# busybox' mktemp is selected!
+#
+# PTXCONF_COREUTILS_RUNCON is not set
+# PTXCONF_COREUTILS_TAC is not set
+
+#
+# BusyBox' md5sum is selected!
+#
+
+#
+# BusyBox' dd is selected!
+#
+
+#
+# busybox' yes is selected!
+#
+# PTXCONF_COREUTILS_FACTOR is not set
+# PTXCONF_COREUTILS_JOIN is not set
+
+#
+# busybox' pwd is selected!
+#
+# PTXCONF_COREUTILS_SHUF is not set
+# PTXCONF_COREUTILS_SHA1SUM is not set
+
+#
+# busybox' tr is selected!
+#
+# PTXCONF_COREUTILS_CSPLIT is not set
+
+#
+# busybox' du is selected!
+#
+
+#
+# busybox' tail is selected!
+#
+# PTXCONF_COREUTILS_PTX is not set
+# PTXCONF_COREUTILS_BASE64 is not set
+# PTXCONF_COREUTILS_TIMEOUT is not set
+
+#
+# busybox' sort is selected!
+#
+
+#
+# busybox' false is selected!
+#
+
+#
+# busybox' dirname is selected!
+#
+
+#
+# busybox' test is selected!
+#
+# PTXCONF_COREUTILS_FMT is not set
+# PTXCONF_COREUTILS_STDBUF is not set
+# PTXCONF_COREUTILS_PINKY is not set
+
+#
+# busybox' basename is selected!
+#
+
+#
+# busybox' id is selected!
+#
+# PTXCONF_COREUTILS_LINK is not set
+
+#
+# busybox' sleep is selected!
+#
+# PTXCONF_COREUTILS_SHA256SUM is not set
+
+#
+# busybox' env is selected!
+#
+
+#
+# busybox' who is selected!
+#
+# PTXCONF_COREUTILS_LOGNAME is not set
+
+#
+# busybox' whoami is selected!
+#
+
+#
+# busybox' stty is selected!
+#
+# PTXCONF_COREUTILS_PATHCHK is not set
+# PTXCONF_COREUTILS_NL is not set
+
+#
+# busybox' wc is selected!
+#
+# PTXCONF_COREUTILS_UNLINK is not set
+# PTXCONF_COREUTILS_UNEXPAND is not set
+# PTXCONF_COREUTILS_NPROC is not set
+# PTXCONF_COREUTILS_VDIR is not set
+
+#
+# busybox' sync is selected!
+#
+
+#
+# busybox' rm is selected!
+#
+# PTXCONF_COREUTILS_CKSUM is not set
+
+#
+# busybox' tee is selected!
+#
+
+#
+# busybox' mkdir is selected!
+#
+
+#
+# busybox' mv is selected!
+#
+
+#
+# busybox' ls is selected!
+#
+
+#
+# busybox' head is selected!
+#
+
+#
+# busybox' true is selected!
+#
+
+#
+# busybox' cat is selected!
+#
+
+#
+# busybox' kill is selected!
+#
+
+#
+# BusyBox' cp is selected!
+#
+# PTXCONF_COREUTILS_COMM is not set
+
+#
+# busybox' split is selected!
+#
+# PTXCONF_COREUTILS_FOLD is not set
+# PTXCONF_COREUTILS_PR is not set
+
+#
+# busybox' uptime is selected!
+#
+
+#
+# busybox' nice is selected!
+#
 # PTXCONF_CPUFREQUTILS is not set
 # PTXCONF_DAEMONIZE is not set
 # PTXCONF_DASH is not set
