@@ -3,12 +3,131 @@
 # veterod
 #
 
-VETEROD_OPTIONS="--error-logfile syslog"
+NEWLINE="
+"
+
+CONFIGURATION=/data/vetero.config
+TEMP_CONFIGURATION=/dev/shm/vetero.conf
+
+SITECOPYRC=/dev/shm/sitecopyrc
+SITECOPY_DATA=/data/.sitecopy
+SITECOPY_ARGS="-r $SITECOPYRC -p $SITECOPY_DATA"
+
+VETERO_WWWDATA=/data/vetero-wwwdata
+VETEROD_OPTIONS="--error-logfile syslog -c $TEMP_CONFIGURATION"
 PIDFILE=/var/run/veterod.pid
+
+# default values
+VETERO_SERIAL_DEVICE=/dev/ttyUSB0
+VETERO_LOCATION='(unknown)'
+VETERO_LOCALE=de_DE.utf-8
+SITECOPY_PROTOCOL_OPTIONS=
+
+if ! [ -r "$CONFIGURATION" ] ; then
+    echo "File '$CONFIGURATION' not found. Don't start veterod."
+    exit 1
+fi
+
+. "$CONFIGURATION"
+
+init_sitecopy()
+{
+    echo -n "Init sitecopy configuration... "
+    if [ -r "$SITECOPYRC" ] ; then
+        echo "(already present)"
+        return
+    fi
+
+    # add newline
+    if [ -n "$SITECOPY_PROTOCOL_OPTIONS" ] ; then
+        SITECOPY_PROTOCOL_OPTIONS="$NEWLINE    $SITECOPY_PROTOCOL_OPTIONS"
+    fi
+
+    cat - > "$SITECOPYRC" <<EOF
+site vetero $SITECOPY_PROTOCOL_OPTIONS
+    server "$SITECOPY_SERVER"
+    username "$SITECOPY_USERNAME"
+    password "$SITECOPY_PASSWORD"
+    remote "$SITECOPY_REMOTE"
+    local "$VETERO_WWWDATA"
+EOF
+    chmod 0600 "$SITECOPYRC"
+
+    echo "done"
+
+    echo -n "Init sitecopy... "
+    if [ -d "$SITECOPY_DATA" ] ; then
+        echo "(already present)"
+        return
+    fi
+
+    echo ""
+
+    mkdir "$SITECOPY_DATA"
+
+    echo "Fetching remote data ..."
+    sitecopy $SITECOPY_ARGS -f vetero
+
+    echo "Synchronize remote data ..."
+    sitecopy $SITECOPY_ARGS -s vetero
+}
+
+generate_configuration()
+{
+    if ! [ -d "$VETERO_WWWDATA" ] ; then
+        echo -n "Generating '$VETERO_WWWDATA' directory ..."
+        mkdir "$VETERO_WWWDATA"
+        echo "done"
+    fi
+
+    echo -n "Generating configuration file... "
+    if [ -r "$TEMP_CONFIGURATION" ] ; then
+        echo "(already present)"
+        return
+    fi
+
+    #
+    # general options
+    #
+
+    echo >>"$TEMP_CONFIGURATION" "serial_device=$VETERO_SERIAL_DEVICE"
+    echo >>"$TEMP_CONFIGURATION" "serial_baud=9600"
+    echo >>"$TEMP_CONFIGURATION" "database_path=/data/vetero.db"
+    echo >>"$TEMP_CONFIGURATION" "report_directory=$VETERO_WWWDATA"
+    echo >>"$TEMP_CONFIGURATION" "locale=$VETERO_LOCALE"
+    
+    #
+    # syslog
+    #
+
+    if [ -n "$VETERO_DISPLAY_NAME" ] && [ -n "$VETERO_DISPLAY_CONNECTION" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "display_name=$VETERO_DISPLAY_NAME"
+        echo >>"$TEMP_CONFIGURATION" "display_connection=$VETERO_DISPLAY_CONNECTION"
+    fi
+
+    #
+    # sitecopy
+    #
+
+    need_init_sitecopy=0
+
+    if [ -n "$SITECOPY_SERVER" ] && [ -n "$SITECOPY_USERNAME" ] && \
+            [ -n "$SITECOPY_PASSWORD" ] && [ -n "$SITECOPY_REMOTE" ] ; then
+        need_init_sitecopy=1
+        echo >>"$TEMP_CONFIGURATION" "report_upload_command='/usr/bin/sitecopy $SITECOPY_ARGS -u vetero'"
+    fi
+
+    echo "done"
+
+    if [ "$need_init_sitecopy" -eq 1 ] ; then
+        init_sitecopy
+    fi
+}
 
 case $1 in
 
     start)
+        generate_configuration
         echo "Starting veterod..."
         start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
         ;;
@@ -17,7 +136,6 @@ case $1 in
         echo "Stopping veterod..."
         start-stop-daemon -K -p "$PIDFILE"
         ;;
-
 esac
 
 # vim: set sw=4 ts=4 et:

@@ -61,7 +61,7 @@ $(STATEDIR)/vetero.targetinstall:
 		../init.d/vetero, \
 		/etc/rc.d/S50vetero)
 
-	@$(call install_alternative, vetero, 0, 0, 0755, /etc/rc.once.d/vetero)
+	@$(call install_alternative, vetero, 0, 0, 0755, /etc/rc.once.d/0vetero)
 
 	@$(call install_finish, vetero)
 
