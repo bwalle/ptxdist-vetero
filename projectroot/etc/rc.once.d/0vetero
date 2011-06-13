@@ -4,6 +4,9 @@ if [ ! -d /data ] ; then
     mkdir /data
 fi
 
+# Mount /data automatically on next startups
+sed -i 's@^\(.*/data.*\)noauto\(.*\)@\1defaults\2@' /etc/fstab
+
 echo -n "Trying to mount /data... "
 mount /data >> /dev/null 2>&1
 if [ $? -eq 0 ] ; then
@@ -22,8 +25,6 @@ else
     /bin/sh
     exit 0
 fi
-
-sed -i 's@^\(.*/data.*\)noauto\(.*\)$@\1defaults\2@' /etc/fstab
 
 echo -n "Mounting /data... "
 mount /data >> /dev/null 2>&1
