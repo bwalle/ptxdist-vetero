@@ -95,7 +95,7 @@ generate_configuration()
     echo >>"$TEMP_CONFIGURATION" "report_directory=$VETERO_WWWDATA"
     echo >>"$TEMP_CONFIGURATION" "locale=$VETERO_LOCALE"
     if [ -n "$VETERO_LOCATION" ] ; then
-        echo >>"$TEMP_CONFIGURATION" "location='$VETERO_LOCATION'"
+        echo >>"$TEMP_CONFIGURATION" "location_string='$VETERO_LOCATION'"
     fi
     
     #
