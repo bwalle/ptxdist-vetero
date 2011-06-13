@@ -19,7 +19,6 @@ PIDFILE=/var/run/veterod.pid
 
 # default values
 VETERO_SERIAL_DEVICE=/dev/ttyUSB0
-VETERO_LOCATION='(unknown)'
 VETERO_LOCALE=de_DE.utf-8
 SITECOPY_PROTOCOL_OPTIONS=
 
@@ -95,6 +94,9 @@ generate_configuration()
     echo >>"$TEMP_CONFIGURATION" "database_path=/data/vetero.db"
     echo >>"$TEMP_CONFIGURATION" "report_directory=$VETERO_WWWDATA"
     echo >>"$TEMP_CONFIGURATION" "locale=$VETERO_LOCALE"
+    if [ -n "$VETERO_LOCATION" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "location='$VETERO_LOCATION'"
+    fi
     
     #
     # syslog
