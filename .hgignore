@@ -1,4 +1,4 @@
-platform-dockstar
+platform*
 src
 configs/dockstar/platformconfig.old
 configs/ptxconfig.old
