@@ -100,7 +100,7 @@ PTXCONF_KERNEL_LZOP=y
 #
 # patching & configuration      
 #
-PTXCONF_KERNEL_SERIES="series_bifferboard"
+PTXCONF_KERNEL_SERIES="series${PTXDIST_PLATFORMSUFFIX}"
 PTXCONF_KERNEL_CONFIG="kernelconfig-${PTXCONF_KERNEL_VERSION}"
 
 #
