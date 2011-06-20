@@ -49,7 +49,6 @@ GNUPLOT_ENV	:= $(CROSS_ENV)
 GNUPLOT_AUTOCONF = \
 	$(CROSS_AUTOCONF_USR) \
 	--disable-history-file \
-	--disable-mouse \
 	--disable-x11-mbfonts \
 	--enable-binary-data-file \
 	--disable-with-image \
@@ -86,8 +85,10 @@ endif
 
 ifdef PTXCONF_GNUPLOT_X
 GNUPLOT_AUTOCONF += --with-x
+GNUPLOT_AUTOCONF += --enable-mouse
 else
 GNUPLOT_AUTOCONF += --without-x
+GNUPLOT_AUTOCONF += --disable-mouse
 endif
 
 ifdef PTXCONF_GNUPLOT_PLOT
@@ -139,7 +140,7 @@ $(STATEDIR)/gnuplot.targetinstall:
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/bin/gnuplot)
 
 ifdef PTXCONF_GNUPLOT_X
-	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/libexec/gnuplot/4.2/gnuplot_x11)
+	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/libexec/gnuplot/4.4/gnuplot_x11)
 endif
 
 	@$(call install_finish, gnuplot)
