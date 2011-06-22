@@ -138,6 +138,7 @@ $(STATEDIR)/gnuplot.targetinstall:
 	@$(call install_fixup, gnuplot,DESCRIPTION,missing)
 
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/bin/gnuplot)
+	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot)
 
 ifdef PTXCONF_GNUPLOT_X
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/libexec/gnuplot/4.4/gnuplot_x11)
