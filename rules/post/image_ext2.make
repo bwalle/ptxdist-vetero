@@ -26,6 +26,9 @@ $(IMAGEDIR)/root.ext2: $(STATEDIR)/image_working_dir
 	@echo -n "Converting the ext2 image to ext3..."
 	@tune2fs -j "$(IMAGEDIR)/root.ext2" >> /dev/null
 	@echo "done."
+	@echo -n "Setting file system label..."
+	@e2label "$(IMAGEDIR)/root.ext2" "VETERO" >> /dev/null
+	@echo "done."
 
 
 $(IMAGEDIR)/root.ext2.gz: $(IMAGEDIR)/root.ext2
