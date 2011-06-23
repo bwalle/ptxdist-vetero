@@ -8,6 +8,8 @@ menuconfig GNUPLOT
 	select ZLIB
 	select LIBPNG if GNUPLOT_PNG
 	select XORG_LIB_XT if GNUPLOT_X
+	select LUA if GNUPLOT_LUA
+	select LUA_INSTALL_LIBLUA if GNUPLOT_LUA
 	help
 	  A command-line driven interactive plotting program for
 	  making 2D and 3D graphs from data and functions.
@@ -16,10 +18,32 @@ menuconfig GNUPLOT
 	  many printers, (La)TeX, (x)fig, Postscript, and so on.
 
 	  Data files and self-defined functions can be manipulated by internal
- 	  C-like language.  Can perform smoothing, spline-fitting, or nonlinear
- 	  fits. Can work with complex numbers.
+	  C-like language.  Can perform smoothing, spline-fitting, or nonlinear
+	  fits. Can work with complex numbers.
 
 if GNUPLOT
+
+config GNUPLOT_HELP
+	bool
+	prompt "Install interactive help"
+	help
+	  Installs the interactive help files on the target.
+	  Requires about 600 kByte of space.
+
+config GNUPLOT_POSTSCRIPT
+	bool
+	prompt "Install Postscript prolog files"
+	help
+	  Installs the prolog files needed to generate Postscript output. If you
+	  don't need Postscript, you can turn off that setting. Requires about
+	  100 kByte of space.
+
+config GNUPLOT_JS
+	bool
+	prompt "Install JavaScript runtime files"
+	help
+	  Installs some JavaScript files and PNG images which will be needed if
+	  HTML5 output should be generated. Requires about 300 kByte of disk space.
 
 config GNUPLOT_FITERRVARS
 	bool
@@ -62,4 +86,12 @@ config GNUPLOT_PDF
 	depends on BROKEN
 	help
 	  Include support for output as PDF (Portable Document Format)
+
+config GNUPLOT_LUA
+	bool
+	prompt "LUA support"
+	help
+	  Include support for LUA scripting engine.
 endif
+
+# vim: ft=kconfig

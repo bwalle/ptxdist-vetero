@@ -84,11 +84,9 @@ GNUPLOT_AUTOCONF += --disable-fiterrvars
 endif
 
 ifdef PTXCONF_GNUPLOT_X
-GNUPLOT_AUTOCONF += --with-x
-GNUPLOT_AUTOCONF += --enable-mouse
+GNUPLOT_AUTOCONF += --with-x --enable-mouse
 else
-GNUPLOT_AUTOCONF += --without-x
-GNUPLOT_AUTOCONF += --disable-mouse
+GNUPLOT_AUTOCONF += --without-x --disable-mouse
 endif
 
 ifdef PTXCONF_GNUPLOT_PLOT
@@ -115,6 +113,12 @@ else
 GNUPLOT_AUTOCONF += --without-pdf
 endif
 
+ifdef PTXCONF_GNUPLOT_LUA
+GNUPLOT_AUTOCONF += --with-lua
+else
+GNUPLOT_AUTOCONF += --without-lua
+endif
+
 # ----------------------------------------------------------------------------
 # Compile
 # ----------------------------------------------------------------------------
@@ -138,7 +142,22 @@ $(STATEDIR)/gnuplot.targetinstall:
 	@$(call install_fixup, gnuplot,DESCRIPTION,missing)
 
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/bin/gnuplot)
-	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot)
+
+ifdef PTXCONF_GNUPLOT_HELP
+	@$(call install_copy, gnuplot, 0, 0, 0644, -, /usr/share/gnuplot/4.4/gnuplot.gih)
+endif
+
+ifdef PTXCONF_GNUPLOT_LUA
+	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/lua)
+endif
+
+ifdef PTXCONF_GNUPLOT_POSTSCRIPT
+	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/PostScript)
+endif
+
+ifdef PTXCONF_GNUPLOT_JS
+	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/js)
+endif
 
 ifdef PTXCONF_GNUPLOT_X
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/libexec/gnuplot/4.4/gnuplot_x11)
