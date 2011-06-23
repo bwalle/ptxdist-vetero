@@ -8,8 +8,6 @@ menuconfig GNUPLOT
 	select ZLIB
 	select LIBPNG if GNUPLOT_PNG
 	select XORG_LIB_XT if GNUPLOT_X
-	select LUA if GNUPLOT_LUA
-	select LUA_INSTALL_LIBLUA if GNUPLOT_LUA
 	help
 	  A command-line driven interactive plotting program for
 	  making 2D and 3D graphs from data and functions.
@@ -87,11 +85,6 @@ config GNUPLOT_PDF
 	help
 	  Include support for output as PDF (Portable Document Format)
 
-config GNUPLOT_LUA
-	bool
-	prompt "LUA support"
-	help
-	  Include support for LUA scripting engine.
 endif
 
 # vim: ft=kconfig

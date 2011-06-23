@@ -75,7 +75,8 @@ GNUPLOT_AUTOCONF = \
 	--without-lisp-files \
 	--without-row-help \
 	--without-tutorial \
-	--without-wx-config
+	--without-wx-config \
+	--without-lua
 
 ifdef PTXCONF_GNUPLOT_FITERRVARS
 GNUPLOT_AUTOCONF += --enable-fiterrvars
@@ -113,12 +114,6 @@ else
 GNUPLOT_AUTOCONF += --without-pdf
 endif
 
-ifdef PTXCONF_GNUPLOT_LUA
-GNUPLOT_AUTOCONF += --with-lua
-else
-GNUPLOT_AUTOCONF += --without-lua
-endif
-
 # ----------------------------------------------------------------------------
 # Compile
 # ----------------------------------------------------------------------------
@@ -145,10 +140,6 @@ $(STATEDIR)/gnuplot.targetinstall:
 
 ifdef PTXCONF_GNUPLOT_HELP
 	@$(call install_copy, gnuplot, 0, 0, 0644, -, /usr/share/gnuplot/4.4/gnuplot.gih)
-endif
-
-ifdef PTXCONF_GNUPLOT_LUA
-	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/lua)
 endif
 
 ifdef PTXCONF_GNUPLOT_POSTSCRIPT
