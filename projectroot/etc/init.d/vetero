@@ -97,6 +97,12 @@ generate_configuration()
     if [ -n "$VETERO_LOCATION" ] ; then
         echo >>"$TEMP_CONFIGURATION" "location_string='$VETERO_LOCATION'"
     fi
+    if [ -n "$VETERO_REPORT_TITLE_COLOR1" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "report_title_color1='$VETERO_REPORT_TITLE_COLOR1'"
+    fi
+    if [ -n "$VETERO_REPORT_TITLE_COLOR2" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "report_title_color2='$VETERO_REPORT_TITLE_COLOR2'"
+    fi
     
     #
     # syslog
