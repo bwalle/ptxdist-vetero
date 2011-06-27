@@ -2,14 +2,21 @@
 #
 # ntpclient
 #
+
+NTPSERVER=@HOST@
+. /dev/shm/udhcpc.config
+if [ -n "$DHCP_NTPSERVER" ] ; then
+	NTPSERVER="$DHCP_NTPSERVER"
+fi
+
 case $1 in
 
 	start)
 		echo "Setting the system time according to NTP..."
-		/usr/sbin/ntpclient -s -h @HOST@ > /dev/null &
+		/usr/sbin/ntpclient -s -h "$NTPSERVER" > /dev/null &
 
 		echo "ntpclient starting"
-		/usr/sbin/ntpclient -i 600 -l -h @HOST@ > /dev/null &
+		/usr/sbin/ntpclient -i 600 -l -h "$NTPSERVER" > /dev/null &
 		;;
 
 esac
