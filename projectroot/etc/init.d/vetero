@@ -148,10 +148,19 @@ generate_configuration()
     fi
 }
 
+custom_hostname()
+{
+    if [ -n "$VETERO_HOSTNAME" ] ; then
+        echo "Setting hostname to '$VETERO_HOSTNAME'..."
+        hostname "$VETERO_HOSTNAME"
+    fi
+}
+
 case $1 in
 
     start)
         generate_configuration
+        custom_hostname
         echo "Starting veterod..."
         start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
         ;;
