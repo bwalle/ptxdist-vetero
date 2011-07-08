@@ -23,6 +23,10 @@ test -n "$DROPBEAR_DSSKEY" || \
 test -n "$DROPBEAR_KEYTYPES" || \
   DROPBEAR_KEYTYPES="rsa dss"
 
+# disable password login for root if there is an authorized keys file for root
+ROOT_HOME=`grep '^root:' /etc/passwd | cut -d : -f 6`
+test -r "$ROOT_HOME/.ssh/authorized_keys" && DROPBEAR_EXTRA_ARGS="$DROPBEAR_EXTRA_ARGS -g"
+
 dropbear_start() {
 
     KEY_ARGS=""

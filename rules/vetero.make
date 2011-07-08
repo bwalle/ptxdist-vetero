@@ -62,6 +62,7 @@ $(STATEDIR)/vetero.targetinstall:
 		/etc/rc.d/S50vetero)
 
 	@$(call install_alternative, vetero, 0, 0, 0755, /etc/rc.once.d/0vetero)
+	@$(call install_alternative, vetero, 0, 0, 0755, /etc/rc.once.d/1vetero_sysinit)
 
 #	# Small backup script
 	@$(call install_alternative, vetero, 0, 0, 0755, /usr/sbin/veterobackup)
