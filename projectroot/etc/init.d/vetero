@@ -10,7 +10,7 @@ CONFIGURATION=/data/vetero.config
 TEMP_CONFIGURATION=/dev/shm/vetero.conf
 
 SITECOPYRC=/dev/shm/sitecopyrc
-SITECOPY_DATA=/data/.sitecopy
+SITECOPY_DATA=/data/sitecopy
 SITECOPY_ARGS="-r $SITECOPYRC -p $SITECOPY_DATA"
 
 VETERO_WWWDATA=/data/vetero-wwwdata
