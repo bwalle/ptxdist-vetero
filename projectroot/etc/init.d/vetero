@@ -7,8 +7,8 @@ NEWLINE="
 "
 
 CONFIGURATION=/data/vetero.config
-TEMP_CONFIGURATION=/dev/shm/vetero.conf
-VETERO_SYSWIDE_CONFIG=/etc/vetero.conf
+TEMP_CONFIGURATION=/dev/shm/veterorc
+VETERO_SYSWIDE_CONFIG=/etc/veterorc
 
 SITECOPYRC=/dev/shm/sitecopyrc
 SITECOPY_DATA=/data/sitecopy
@@ -105,7 +105,7 @@ generate_configuration()
         echo >>"$TEMP_CONFIGURATION" "report_title_color2='$VETERO_REPORT_TITLE_COLOR2'"
     fi
 
-    # symlink /etc/vetero.conf and add some reliability to not overwrite custom
+    # symlink /etc/veterorc and add some reliability to not overwrite custom
     # configurations
     if ! [ -h "$VETERO_SYSWIDE_CONFIG" ] ; then
         if [ -r "$VETERO_SYSWIDE_CONFIG" ] ; then
