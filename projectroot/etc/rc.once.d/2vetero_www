@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd /var/www
+ln -s /data/vetero-wwwdata data
+ln -s /var/log/messages syslog
