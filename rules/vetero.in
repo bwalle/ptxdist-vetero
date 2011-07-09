@@ -5,6 +5,7 @@ config VETERO
 	prompt "vetero"
 	select HOST_CMAKE
         select LIBCONFUSE
+        select SQLITE
 	help
 	  FIXME
 
