@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# PTXdist 2011.06.0
+# PTXdist 2011.07.0
 #
 PTXCONF_MODULES=y
 PTXCONF_VETERO=y
@@ -33,7 +33,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_LOCAL_PLATFORM is not set
 # PTXCONF_PROJECT_CREATE_DEVPKGS is not set
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
-PTXCONF_CONFIGFILE_VERSION="2011.06.0"
+PTXCONF_CONFIGFILE_VERSION="2011.07.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -179,10 +179,12 @@ PTXCONF_CROSS_PKG_CONFIG_WRAPPER=y
 # PTXCONF_LTRACE is not set
 # PTXCONF_LTT_CONTROL is not set
 # PTXCONF_MEMTEST is not set
+# PTXCONF_MEMTEST86P is not set
 # PTXCONF_MEMTESTER is not set
 # PTXCONF_OPROFILE is not set
 # PTXCONF_POWERTOP is not set
 # PTXCONF_PRELINK is not set
+# PTXCONF_RRDTOOL is not set
 
 #
 # busybox's ps is enabled: rtps disabled
@@ -283,6 +285,7 @@ PTXCONF_GCCLIBS_CXX=y
 # PTXCONF_GCCLIBS_GCJ is not set
 PTXCONF_ICONV=y
 PTXCONF_GLOBAL_IPV6=y
+# PTXCONF_KERNEL_HEADER is not set
 PTXCONF_GLOBAL_LARGE_FILE=y
 PTXCONF_LIBC=y
 PTXCONF_LIBC_GLIBC=y
@@ -1689,6 +1692,7 @@ PTXCONF_DROPBEAR_STARTSCRIPT=y
 # PTXCONF_ETHERWAKE is not set
 # PTXCONF_ETHTOOL is not set
 # PTXCONF_FCGI is not set
+# PTXCONF_FLUP is not set
 # PTXCONF_HASERL is not set
 # PTXCONF_HPING is not set
 # PTXCONF_IFPLUGD is not set
@@ -1764,6 +1768,7 @@ PTXCONF_NTPCLIENT_NTPSERVER_NAME="pool.ntp.org"
 # PTXCONF_PUREFTPD is not set
 # PTXCONF_RSYNC is not set
 # PTXCONF_RSYNC3 is not set
+# PTXCONF_RSYSLOG is not set
 PTXCONF_SITECOPY=y
 PTXCONF_SITECOPY_FTP=y
 PTXCONF_SITECOPY_RSH=y
@@ -1838,6 +1843,7 @@ PTXCONF_SITECOPY_XML_EXPAT=y
 #
 # PTXCONF_CVS is not set
 # PTXCONF_GNUPG is not set
+# PTXCONF_LPC21ISP is not set
 
 #
 # Editors                       
@@ -2040,6 +2046,7 @@ PTXCONF_GNUPLOT=y
 # framebuffer                   
 #
 # PTXCONF_FBGRAB is not set
+# PTXCONF_FBSET is not set
 # PTXCONF_FBTEST is not set
 # PTXCONF_FBUTILS is not set
 # PTXCONF_FBV is not set
@@ -2086,9 +2093,11 @@ PTXCONF_GNUPLOT=y
 # qt                            
 #
 # PTXCONF_ARORA is not set
+# PTXCONF_PYSIDE is not set
 # PTXCONF_QT4_EXAMPLES is not set
 # PTXCONF_QT4 is not set
 # PTXCONF_QWT is not set
+# PTXCONF_SHIBOKEN is not set
 
 #
 # sdl                           
@@ -2125,13 +2134,18 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_FLAC is not set
 # PTXCONF_FREETYPE is not set
 # PTXCONF_LIBCACA is not set
+# PTXCONF_LIBDMTX is not set
 # PTXCONF_LIBMPEG2 is not set
 # PTXCONF_LIBOGG is not set
 # PTXCONF_LIBTHEORA is not set
+# PTXCONF_LIBV4L2_PYTHON is not set
 # PTXCONF_LIBVORBIS is not set
 # PTXCONF_PIXMAN is not set
+# PTXCONF_PYTHON_IMAGING is not set
 # PTXCONF_SPEEX is not set
+# PTXCONF_SVGALIB is not set
 # PTXCONF_TSLIB is not set
+# PTXCONF_V4L_UTILS is not set
 # PTXCONF_WXWIDGETS is not set
 # PTXCONF_XORG is not set
 
