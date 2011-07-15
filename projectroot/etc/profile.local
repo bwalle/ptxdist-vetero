@@ -1,0 +1,4 @@
+
+if [ `id -u` = 0 ] ; then
+    PATH=/usr/sbin:/sbin:$PATH
+fi

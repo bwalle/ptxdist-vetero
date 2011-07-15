@@ -72,6 +72,9 @@ $(STATEDIR)/vetero.targetinstall:
 	@$(call install_alternative, vetero, 0, 0, 0755, /usr/sbin/veterobackup)
 	@$(call install_alternative, vetero, 0, 0, 0600, /var/spool/cron/crontabs/root)
 
+#	# Correct the PATH for root logins via SSH
+	@$(call install_alternative, vetero, 0, 0, 0600, /etc/profile.local)
+
 	@$(call install_finish, vetero)
 
 	@$(call touch)
