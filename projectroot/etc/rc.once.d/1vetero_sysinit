@@ -5,7 +5,7 @@ ROOT_HOME=`grep '^root:' /etc/passwd | cut -d : -f 6`
 ROOT_SSH_DIR=$ROOT_HOME/.ssh
 AUTHORIZED_KEYS=$ROOT_SSH_DIR/authorized_keys
 
-if [ -n "$SSH_KEYS" ] ; then
+if [ -r "$SSH_KEYS" ] ; then
     echo "SSH keys found. Adding to authorized_keys and disabling password root access"
     if ! [ -d "$ROOT_SSH_DIR" ] ; then
         mkdir "$ROOT_SSH_DIR"
