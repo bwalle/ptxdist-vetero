@@ -9,6 +9,7 @@ if grep -q "quiet" /proc/cmdline; then
 	exec 1>/dev/null
 fi
 
+mount -o remount,noatime /
 mkdir /dev/shm
 
 echo -n "mounting filesystems..."
