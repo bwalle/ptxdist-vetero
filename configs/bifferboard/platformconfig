@@ -1,8 +1,8 @@
 #
 # Automatically generated make config: don't edit
-# PTXdist 2011.07.0-00025-g70c7d69
+# PTXdist 2011.07.0-00058-gc6f0852
 #
-PTXCONF_PLATFORMCONFIG_VERSION="2011.07.0-00025-g70c7d69"
+PTXCONF_PLATFORMCONFIG_VERSION="2011.07.0-00058-gc6f0852"
 PTXCONF__platformconfig_MAGIC__=y
 
 #
