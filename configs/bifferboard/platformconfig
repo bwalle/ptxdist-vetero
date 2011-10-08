@@ -1,8 +1,8 @@
 #
 # Automatically generated make config: don't edit
-# PTXdist 2011.08.0
+# PTXdist 2011.10.0
 #
-PTXCONF_PLATFORMCONFIG_VERSION="2011.08.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2011.10.0"
 PTXCONF__platformconfig_MAGIC__=y
 
 #
@@ -23,6 +23,7 @@ PTXCONF_PLATFORM_VERSION="-2011.01.0"
 # architecture                  
 #
 # PTXCONF_ARCH_ALPHA is not set
+# PTXCONF_ARCH_AVR32 is not set
 # PTXCONF_ARCH_AVR is not set
 # PTXCONF_ARCH_ARM is not set
 # PTXCONF_ARCH_BLACKFIN is not set
@@ -119,6 +120,7 @@ PTXCONF_CONSOLE_SPEED="115200"
 #
 # bootloaders                   
 #
+# PTXCONF_AT91BOOTSTRAP2 is not set
 # PTXCONF_BAREBOX is not set
 # PTXCONF_GRUB is not set
 # PTXCONF_HOST_MXS_UTILS is not set
