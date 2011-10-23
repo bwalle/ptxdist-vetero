@@ -4,3 +4,4 @@ configs/dockstar/platformconfig.old
 configs/ptxconfig.old
 selected_platformconfig
 selected_toolchain
+p
