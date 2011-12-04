@@ -6,3 +6,4 @@ configs/ptxconfig.old
 selected_platformconfig
 selected_toolchain
 p
+patches/linux-*/series
