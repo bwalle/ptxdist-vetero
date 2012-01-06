@@ -1,6 +1,6 @@
 ---
- arch/arm/mach-kirkwood/dockstar-setup.c |   10 ++++++++++
- 1 file changed, 10 insertions(+)
+ arch/arm/mach-kirkwood/dockstar-setup.c |   12 ++++++++++++
+ 1 file changed, 12 insertions(+)
 
 --- a/arch/arm/mach-kirkwood/dockstar-setup.c
 +++ b/arch/arm/mach-kirkwood/dockstar-setup.c
@@ -12,7 +12,12 @@
  #include <linux/leds.h>
  #include <asm/mach-types.h>
  #include <asm/mach/arch.h>
-@@ -78,6 +79,12 @@ static unsigned int dockstar_mpp_config[
+@@ -75,9 +76,17 @@ static unsigned int dockstar_mpp_config[
+ 	MPP29_GPIO,	/* USB Power Enable */
+ 	MPP46_GPIO,	/* LED green */
+ 	MPP47_GPIO,	/* LED orange */
++	MPP8_TW0_SDA,	/* I2C data */
++	MPP9_TW0_SCK,	/* I2C clock */
  	0
  };
  
@@ -25,7 +30,7 @@
  static void __init dockstar_init(void)
  {
  	/*
-@@ -99,6 +106,9 @@ static void __init dockstar_init(void)
+@@ -99,6 +108,9 @@ static void __init dockstar_init(void)
  	kirkwood_ge00_init(&dockstar_ge00_data);
  
  	platform_device_register(&dockstar_leds);
