@@ -1,9 +1,9 @@
 ---
- arch/arm/mach-kirkwood/sheevaplug-setup.c |   12 ++++++++++++
- 1 file changed, 12 insertions(+)
+ arch/arm/mach-kirkwood/dockstar-setup.c |   10 ++++++++++
+ 1 file changed, 10 insertions(+)
 
---- a/arch/arm/mach-kirkwood/sheevaplug-setup.c
-+++ b/arch/arm/mach-kirkwood/sheevaplug-setup.c
+--- a/arch/arm/mach-kirkwood/dockstar-setup.c
++++ b/arch/arm/mach-kirkwood/dockstar-setup.c
 @@ -15,6 +15,7 @@
  #include <linux/mtd/partitions.h>
  #include <linux/mv643xx_eth.h>
@@ -12,16 +12,7 @@
  #include <linux/leds.h>
  #include <asm/mach-types.h>
  #include <asm/mach/arch.h>
-@@ -88,6 +89,8 @@ static unsigned int sheevaplug_mpp_confi
- 	MPP29_GPIO,	/* USB Power Enable */
- 	MPP46_GPIO,	/* LED Red */
- 	MPP49_GPIO,	/* LED */
-+	MPP8_TW0_SDA,	/* I2C data */
-+	MPP9_TW0_SCK,	/* I2C clock */
- 	0
- };
- 
-@@ -99,6 +102,12 @@ static unsigned int sheeva_esata_mpp_con
+@@ -78,6 +79,12 @@ static unsigned int dockstar_mpp_config[
  	0
  };
  
@@ -31,16 +22,16 @@
 +	},
 +};
 +
- static void __init sheevaplug_init(void)
+ static void __init dockstar_init(void)
  {
  	/*
-@@ -133,6 +142,9 @@ static void __init sheevaplug_init(void)
- 		kirkwood_sdio_init(&sheevaplug_mvsdio_data);
+@@ -99,6 +106,9 @@ static void __init dockstar_init(void)
+ 	kirkwood_ge00_init(&dockstar_ge00_data);
  
- 	platform_device_register(&sheevaplug_leds);
+ 	platform_device_register(&dockstar_leds);
 +
 +	i2c_register_board_info(0, i2c_board_info, ARRAY_SIZE(i2c_board_info));
 +	kirkwood_i2c_init();
  }
  
- #ifdef CONFIG_MACH_SHEEVAPLUG
+ MACHINE_START(DOCKSTAR, "Seagate FreeAgent DockStar")
