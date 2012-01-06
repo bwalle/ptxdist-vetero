@@ -123,7 +123,7 @@ Subject: [PATCH 12/14] mmc over gpio
 +be done automatically.
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
-@@ -2930,6 +2930,11 @@ L:	linuxppc-dev@lists.ozlabs.org
+@@ -3008,6 +3008,11 @@ L:	linuxppc-dev@lists.ozlabs.org
  S:	Odd Fixes
  F:	drivers/tty/hvc/
  

@@ -5,13 +5,11 @@ Subject: [PATCH 05/14] boot without FPU
 
 ---
  arch/x86/kernel/cpu/bugs.c |    5 +++--
- 1 files changed, 3 insertions(+), 2 deletions(-)
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
-diff --git a/arch/x86/kernel/cpu/bugs.c b/arch/x86/kernel/cpu/bugs.c
-index 01a2652..632476d 100644
 --- a/arch/x86/kernel/cpu/bugs.c
 +++ b/arch/x86/kernel/cpu/bugs.c
-@@ -55,8 +55,9 @@ static void __init check_fpu(void)
+@@ -56,8 +56,9 @@ static void __init check_fpu(void)
  	if (!boot_cpu_data.hard_math) {
  #ifndef CONFIG_MATH_EMULATION
  		printk(KERN_EMERG "No coprocessor found and no math emulation present.\n");
@@ -23,6 +21,3 @@ index 01a2652..632476d 100644
  #endif
  		return;
  	}
--- 
-1.6.4
-

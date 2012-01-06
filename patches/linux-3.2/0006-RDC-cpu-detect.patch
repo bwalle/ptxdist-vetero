@@ -86,7 +86,7 @@ Subject: [PATCH 06/14] RDC cpu detect
 +
 --- a/arch/x86/include/asm/processor.h
 +++ b/arch/x86/include/asm/processor.h
-@@ -120,7 +120,8 @@ struct cpuinfo_x86 {
+@@ -121,7 +121,8 @@ struct cpuinfo_x86 {
  #define X86_VENDOR_CENTAUR	5
  #define X86_VENDOR_TRANSMETA	7
  #define X86_VENDOR_NSC		8
@@ -98,7 +98,7 @@ Subject: [PATCH 06/14] RDC cpu detect
  
 --- a/arch/x86/kernel/cpu/Makefile
 +++ b/arch/x86/kernel/cpu/Makefile
-@@ -25,6 +25,7 @@ obj-$(CONFIG_CPU_SUP_CYRIX_32)		+= cyrix
+@@ -26,6 +26,7 @@ obj-$(CONFIG_CPU_SUP_CYRIX_32)		+= cyrix
  obj-$(CONFIG_CPU_SUP_CENTAUR)		+= centaur.o
  obj-$(CONFIG_CPU_SUP_TRANSMETA_32)	+= transmeta.o
  obj-$(CONFIG_CPU_SUP_UMC_32)		+= umc.o

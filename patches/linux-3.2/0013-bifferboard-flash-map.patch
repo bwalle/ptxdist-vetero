@@ -12,7 +12,7 @@ Subject: [PATCH 13/14] bifferboard flash map
 
 --- a/drivers/mtd/maps/Kconfig
 +++ b/drivers/mtd/maps/Kconfig
-@@ -561,4 +561,16 @@ config MTD_LATCH_ADDR
+@@ -535,4 +535,16 @@ config MTD_LATCH_ADDR
  
            If compiled as a module, it will be called latch-addr-flash.
  
@@ -31,7 +31,7 @@ Subject: [PATCH 13/14] bifferboard flash map
  endmenu
 --- a/drivers/mtd/maps/Makefile
 +++ b/drivers/mtd/maps/Makefile
-@@ -34,6 +34,7 @@ obj-$(CONFIG_MTD_SBC_GXX)	+= sbc_gxx.o
+@@ -32,6 +32,7 @@ obj-$(CONFIG_MTD_SBC_GXX)	+= sbc_gxx.o
  obj-$(CONFIG_MTD_SC520CDP)	+= sc520cdp.o
  obj-$(CONFIG_MTD_NETSC520)	+= netsc520.o
  obj-$(CONFIG_MTD_TS5500)	+= ts5500_flash.o
