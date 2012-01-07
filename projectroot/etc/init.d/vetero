@@ -104,6 +104,12 @@ generate_configuration()
     if [ -n "$VETERO_REPORT_TITLE_COLOR2" ] ; then
         echo >>"$TEMP_CONFIGURATION" "report_title_color2='$VETERO_REPORT_TITLE_COLOR2'"
     fi
+    if [ -n "$VETERO_PRESSURE_SENSOR_I2C_BUS" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "pressure_sensor_i2c_bus=$VETERO_PRESSURE_SENSOR_I2C_BUS"
+    fi
+    if [ -n "$VETERO_PRESSURE_HEIGHT" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "pressure_height=$VETERO_PRESSURE_HEIGHT"
+    fi
 
     # symlink /etc/veterorc and add some reliability to not overwrite custom
     # configurations
