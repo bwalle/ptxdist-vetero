@@ -1,6 +1,6 @@
 #
 # Automatically generated make config: don't edit
-# PTXdist 2011.12.0
+# PTXdist 2012.01.0
 #
 PTXCONF_MODULES=y
 PTXCONF_VETERO=y
@@ -33,7 +33,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_LOCAL_PLATFORM is not set
 # PTXCONF_PROJECT_CREATE_DEVPKGS is not set
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
-PTXCONF_CONFIGFILE_VERSION="2011.12.0"
+PTXCONF_CONFIGFILE_VERSION="2012.01.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -215,6 +215,7 @@ PTXCONF_RC_ONCE_BBINIT_LINK="S01rc-once"
 PTXCONF_INITMETHOD_BBINIT_LINK_MODULES="S98modules"
 PTXCONF_INITMETHOD_BBINIT_LINK_NETWORKING="S16networking"
 PTXCONF_RC_ONCE=y
+PTXCONF_OS_RELEASE=y
 
 #
 # directories in rootfs         
@@ -1580,13 +1581,21 @@ PTXCONF_KEXEC_TOOLS_KEXEC=y
 # Scripting Languages           
 #
 # PTXCONF_CBMBASIC is not set
-# PTXCONF_DBUS_PYTHON is not set
 # PTXCONF_GMAKE is not set
 # PTXCONF_JS is not set
 # PTXCONF_LUA is not set
 # PTXCONF_PHP5 is not set
-# PTXCONF_PYGOBJECT is not set
 # PTXCONF_PYTHON is not set
+
+#
+# python Extra Modules          
+#
+# PTXCONF_DBUS_PYTHON is not set
+# PTXCONF_FLUP is not set
+# PTXCONF_LIBV4L2_PYTHON is not set
+# PTXCONF_PYGOBJECT is not set
+# PTXCONF_PYSERIAL is not set
+# PTXCONF_PYTHON_IMAGING is not set
 # PTXCONF_PYTHON3 is not set
 
 #
@@ -1679,7 +1688,6 @@ PTXCONF_DROPBEAR_STARTSCRIPT=y
 # PTXCONF_ETHERWAKE is not set
 # PTXCONF_ETHTOOL is not set
 # PTXCONF_FCGI is not set
-# PTXCONF_FLUP is not set
 # PTXCONF_HASERL is not set
 # PTXCONF_HPING is not set
 # PTXCONF_IFPLUGD is not set
@@ -1880,6 +1888,7 @@ PTXCONF_LIBCONFUSE=y
 # PTXCONF_LIBICAL is not set
 # PTXCONF_LIBIODBC is not set
 # PTXCONF_LIBJPEG is not set
+# PTXCONF_LIBKMOD is not set
 # PTXCONF_LIBKSBA is not set
 # PTXCONF_LIBLIST is not set
 # PTXCONF_LIBLTDL is not set
@@ -1900,6 +1909,7 @@ PTXCONF_LIBPCRE=y
 # PTXCONF_LIBPCRE_ENABLE_UTF8 is not set
 # PTXCONF_LIBPCRE_LIBPCREPOSIX is not set
 # PTXCONF_LIBPCRE_LIBPCRECPP is not set
+# PTXCONF_LIBPIPELINE is not set
 # PTXCONF_LIBPNG is not set
 PTXCONF_LIBPOPT=y
 # PTXCONF_LIBPOPT_NLS is not set
@@ -1907,6 +1917,7 @@ PTXCONF_LIBPOPT=y
 # PTXCONF_LIBSIGCPP is not set
 # PTXCONF_LIBSYSFS is not set
 # PTXCONF_LIBUCDAEMON is not set
+# PTXCONF_LIBURCU is not set
 PTXCONF_LIBUSB_COMPAT=y
 PTXCONF_LIBUSB=y
 PTXCONF_LIBUSB_DISABLE_LOG=y
@@ -2059,20 +2070,19 @@ PTXCONF_GNUPLOT=y
 # gtk+ & friends                
 #
 # PTXCONF_ATK is not set
+# PTXCONF_ATKMM is not set
 # PTXCONF_CAIRO is not set
 # PTXCONF_CAIROMM is not set
+# PTXCONF_GDK_PIXBUF is not set
 # PTXCONF_GLADE is not set
 # PTXCONF_GLADEMM is not set
 # PTXCONF_GLIB is not set
 # PTXCONF_GLIBMM is not set
-# PTXCONF_GTK_ENGINE_EXPERIENCE is not set
-# PTXCONF_GTK_THEME_EXPERIENCE is not set
-# PTXCONF_GTKCORE is not set
+# PTXCONF_GTK_ENGINES is not set
+# PTXCONF_GTK is not set
 # PTXCONF_GTKMM is not set
-# PTXCONF_GWT is not set
 # PTXCONF_LIBCROCO is not set
 # PTXCONF_LIBGEE is not set
-# PTXCONF_LIBGLADE is not set
 # PTXCONF_LIBRSVG is not set
 # PTXCONF_PANGO is not set
 # PTXCONF_PANGOMM is not set
@@ -2130,11 +2140,9 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_LIBMPEG2 is not set
 # PTXCONF_LIBOGG is not set
 # PTXCONF_LIBTHEORA is not set
-# PTXCONF_LIBV4L2_PYTHON is not set
 # PTXCONF_LIBVORBIS is not set
 # PTXCONF_ORC is not set
 # PTXCONF_PIXMAN is not set
-# PTXCONF_PYTHON_IMAGING is not set
 # PTXCONF_SPEEX is not set
 # PTXCONF_SVGALIB is not set
 # PTXCONF_TSLIB is not set

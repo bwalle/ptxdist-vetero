@@ -1,8 +1,8 @@
 #
 # Automatically generated make config: don't edit
-# PTXdist 2011.12.0
+# PTXdist 2012.01.0
 #
-PTXCONF_PLATFORMCONFIG_VERSION="2011.12.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2012.01.0"
 PTXCONF__platformconfig_MAGIC__=y
 
 #
@@ -113,6 +113,10 @@ PTXCONF_CONSOLE_NAME="ttyS0"
 PTXCONF_CONSOLE_SPEED="115200"
 
 #
+# extra kernel                  
+#
+
+#
 # bootloaders                   
 #
 # PTXCONF_AT91BOOTSTRAP is not set
@@ -150,6 +154,7 @@ PTXCONF_IMAGE_HD_PART2_END="3774873"
 PTXCONF_IMAGE_HD_PART2_TYPE="0x83"
 # PTXCONF_IMAGE_HD_PART3 is not set
 PTXCONF_IMAGE_HD_PART1_CONTENT="${IMAGEDIR}/root.ext2"
+# PTXCONF_IMAGE_VDI is not set
 
 #
 # ipkg options                  
