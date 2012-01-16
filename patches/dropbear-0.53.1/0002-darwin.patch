@@ -1,0 +1,26 @@
+From https://dev.openwrt.org/browser/trunk/package/dropbear/patches/200-lcrypt_bsdfix.patch?rev=25891
+---
+---
+ Makefile.in |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -31,7 +31,7 @@ COMMONOBJS=dbutil.o buffer.o \
+ SVROBJS=svr-kex.o svr-algo.o svr-auth.o sshpty.o \
+ 		svr-authpasswd.o svr-authpubkey.o svr-authpubkeyoptions.o svr-session.o svr-service.o \
+ 		svr-chansession.o svr-runopts.o svr-agentfwd.o svr-main.o svr-x11fwd.o\
+-		svr-tcpfwd.o svr-authpam.o @CRYPTLIB@
++		svr-tcpfwd.o svr-authpam.o
+ 
+ CLIOBJS=cli-algo.o cli-main.o cli-auth.o cli-authpasswd.o cli-kex.o \
+ 		cli-session.o cli-service.o cli-runopts.o cli-chansession.o \
+@@ -77,7 +77,7 @@ STRIP=@STRIP@
+ INSTALL=@INSTALL@
+ CPPFLAGS=@CPPFLAGS@
+ CFLAGS+=-I. -I$(srcdir) $(CPPFLAGS) @CFLAGS@
+-LIBS+=@LIBS@
++LIBS+=@CRYPTLIB@ @LIBS@
+ LDFLAGS=@LDFLAGS@
+ 
+ EXEEXT=@EXEEXT@
