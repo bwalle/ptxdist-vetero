@@ -40,7 +40,6 @@ $(ZLIB_SOURCE):
 
 ZLIB_CONF_ENV := \
 	$(CROSS_ENV) \
-	uname=Linux \
 	CROSS_PREFIX=$(PTXCONF_COMPILER_PREFIX) \
 	CFLAGS="$(CROSS_CPPFLAGS) -O2 -g"
 
@@ -48,7 +47,8 @@ ZLIB_CONF_ENV := \
 # autoconf
 #
 ZLIB_AUTOCONF := \
-	--prefix=/usr
+	--prefix=/usr \
+	--uname=Linux
 
 ifdef PTXCONF_ZLIB_STATIC
 ZLIB_AUTOCONF += --static
