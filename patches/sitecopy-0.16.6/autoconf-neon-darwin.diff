@@ -1,0 +1,44 @@
+---
+ m4/neon/neon.m4 |   23 +++++++++++------------
+ 1 file changed, 11 insertions(+), 12 deletions(-)
+
+--- a/m4/neon/neon.m4
++++ b/m4/neon/neon.m4
+@@ -410,19 +410,17 @@ fi
+ ])
+ 
+ AC_DEFUN([NE_CHECK_OS], [
+-# Check for Darwin, which needs extra cpp and linker flags.
+-AC_CACHE_CHECK([for uname], ne_cv_os_uname, [
+- ne_cv_os_uname=`uname -s 2>/dev/null`
+-])
+ 
+-if test "$ne_cv_os_uname" = "Darwin"; then
+-  CPPFLAGS="$CPPFLAGS -no-cpp-precomp"
+-  LDFLAGS="$LDFLAGS -flat_namespace" 
+-  # poll has various issues in various Darwin releases
+-  if test x${ac_cv_func_poll+set} != xset; then
+-    ac_cv_func_poll=no
+-  fi
+-fi
++case "$host_os" in
++  darwin*)
++    CPPFLAGS="$CPPFLAGS -no-cpp-precomp"
++    LDFLAGS="$LDFLAGS -flat_namespace"
++    # poll has various issues in various Darwin releases
++    if test x${ac_cv_func_poll+set} != xset; then
++      ac_cv_func_poll=no
++    fi
++    ;;
++esac
+ ])
+ 
+ AC_DEFUN([NEON_COMMON_CHECKS], [
+@@ -431,6 +429,7 @@ AC_DEFUN([NEON_COMMON_CHECKS], [
+ # is used.
+ 
+ AC_REQUIRE([AC_PROG_CC])
++AC_REQUIRE([AC_CANONICAL_SYSTEM])
+ AC_REQUIRE([AC_ISC_POSIX])
+ AC_REQUIRE([AC_C_INLINE])
+ AC_REQUIRE([AC_C_CONST])

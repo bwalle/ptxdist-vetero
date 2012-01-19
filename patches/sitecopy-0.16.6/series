@@ -1,2 +1,3 @@
 sitecopy-ignore-directory-permission.diff
 sitecopy-neon-openssl.diff
+autoconf-neon-darwin.diff
