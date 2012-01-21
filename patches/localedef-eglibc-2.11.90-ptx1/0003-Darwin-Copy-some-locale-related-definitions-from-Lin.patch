@@ -1,0 +1,182 @@
+From: Bernhard Walle <bernhard@bwalle.de>
+Date: Sat, 21 Jan 2012 23:06:49 +0100
+Subject: [PATCH] Darwin: Copy some locale-related definitions from Linux
+
+Darwin lacks support for GNU locale extensions like some LC_* macros
+like LC_PAPER, all __LC_* macros. Also we have the problem that system
+<nl_types.h> redefines _NL_ITEM.
+
+The function nl_langinfo() is not used in that source code, but its
+declaration fails on Darwin because of the missing nl_item.
+
+The fix adds own versions of <bits/locale.h>, <locale.h> and
+<nl_types.h> that just contain constants, no function definitions. That
+should be quite safe. On Linux, the header are just including system
+headers using include_next.
+
+Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
+---
+ eglibc/locale/bits/locale.h |   46 +++++++++++++++++++++++++++++++++++++++++++
+ eglibc/locale/langinfo.h    |    2 +
+ eglibc/locale/locale.h      |   40 +++++++++++++++++++++++++++++++++++++
+ eglibc/locale/nl_types.h    |   37 ++++++++++++++++++++++++++++++++++
+ 4 files changed, 125 insertions(+), 0 deletions(-)
+ create mode 100644 eglibc/locale/bits/locale.h
+ create mode 100644 eglibc/locale/locale.h
+ create mode 100644 eglibc/locale/nl_types.h
+
+diff --git a/eglibc/locale/bits/locale.h b/eglibc/locale/bits/locale.h
+new file mode 100644
+index 0000000..aac2823
+--- /dev/null
++++ b/eglibc/locale/bits/locale.h
+@@ -0,0 +1,46 @@
++/* Definition of locale category symbol values.
++   Copyright (C) 2001 Free Software Foundation, Inc.
++   This file is part of the GNU C Library.
++
++   The GNU C Library is free software; you can redistribute it and/or
++   modify it under the terms of the GNU Lesser General Public
++   License as published by the Free Software Foundation; either
++   version 2.1 of the License, or (at your option) any later version.
++
++   The GNU C Library is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++   Lesser General Public License for more details.
++
++   You should have received a copy of the GNU Lesser General Public
++   License along with the GNU C Library; if not, write to the Free
++   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++   02111-1307 USA.  */
++
++#ifdef __linux__
++#include_next <bits/locale.h>
++#else
++
++#ifndef _BITS_LOCALE_H 
++#define _BITS_LOCALE_H  1 
++ 
++enum 
++{ 
++  __LC_CTYPE = 0, 
++  __LC_NUMERIC = 1, 
++  __LC_TIME = 2, 
++  __LC_COLLATE = 3, 
++  __LC_MONETARY = 4, 
++  __LC_MESSAGES = 5, 
++  __LC_ALL = 6, 
++  __LC_PAPER = 7, 
++  __LC_NAME = 8, 
++  __LC_ADDRESS = 9, 
++  __LC_TELEPHONE = 10, 
++  __LC_MEASUREMENT = 11, 
++  __LC_IDENTIFICATION = 12 
++}; 
++ 
++#endif  /* bits/locale.h */
++
++#endif /* __linux__ */
+diff --git a/eglibc/locale/langinfo.h b/eglibc/locale/langinfo.h
+index 0a53365..4e4480e 100644
+--- a/eglibc/locale/langinfo.h
++++ b/eglibc/locale/langinfo.h
+@@ -581,7 +581,9 @@ enum
+    The string returned will not change until `setlocale' is called;
+    it is usually in read-only memory and cannot be modified.  */
+ 
++#ifdef __linux__
+ extern char *nl_langinfo (nl_item __item) __THROW;
++#endif
+ 
+ 
+ #ifdef	__USE_XOPEN2K
+diff --git a/eglibc/locale/locale.h b/eglibc/locale/locale.h
+new file mode 100644
+index 0000000..9e0b2de
+--- /dev/null
++++ b/eglibc/locale/locale.h
+@@ -0,0 +1,40 @@
++/* 
++   This program is free software; you can redistribute it and/or modify
++   it under the terms of the GNU General Public License as published
++   by the Free Software Foundation; version 2 of the License, or
++   (at your option) any later version.
++
++   This program is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++   GNU General Public License for more details.
++
++   You should have received a copy of the GNU General Public License
++   along with this program; if not, write to the Free Software Foundation,
++   Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.  */
++
++#ifdef __linux__
++#include_next <locale.h>
++#else
++
++#include <bits/locale.h>
++
++/* These are the possibilities for the first argument to setlocale.
++   The code assumes that the lowest LC_* symbol has the value zero.  */
++#define LC_CTYPE          __LC_CTYPE
++#define LC_NUMERIC        __LC_NUMERIC
++#define LC_TIME           __LC_TIME
++#define LC_COLLATE        __LC_COLLATE
++#define LC_MONETARY       __LC_MONETARY
++#define LC_MESSAGES       __LC_MESSAGES
++#define LC_ALL        __LC_ALL
++#define LC_PAPER      __LC_PAPER
++#define LC_NAME       __LC_NAME
++#define LC_ADDRESS    __LC_ADDRESS
++#define LC_TELEPHONE      __LC_TELEPHONE
++#define LC_MEASUREMENT    __LC_MEASUREMENT
++#define LC_IDENTIFICATION __LC_IDENTIFICATION
++
++char *setlocale(int category, const char *locale);
++
++#endif /* __linux__ */
+diff --git a/eglibc/locale/nl_types.h b/eglibc/locale/nl_types.h
+new file mode 100644
+index 0000000..0425604
+--- /dev/null
++++ b/eglibc/locale/nl_types.h
+@@ -0,0 +1,37 @@
++
++#ifdef __linux__
++#include_next <nl_types.h>
++#else
++
++/* Copyright (C) 1996, 1997, 1999, 2003, 2004 Free Software Foundation, Inc.
++   This file is part of the GNU C Library.
++
++   The GNU C Library is free software; you can redistribute it and/or
++   modify it under the terms of the GNU Lesser General Public
++   License as published by the Free Software Foundation; either
++   version 2.1 of the License, or (at your option) any later version.
++
++   The GNU C Library is distributed in the hope that it will be useful,
++   but WITHOUT ANY WARRANTY; without even the implied warranty of
++   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++   Lesser General Public License for more details.
++
++   You should have received a copy of the GNU Lesser General Public
++   License along with the GNU C Library; if not, write to the Free
++   Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
++   02111-1307 USA.  */
++
++#ifndef _NL_TYPES_H
++#define _NL_TYPES_H 1
++
++#include <features.h>
++
++/* The default message set used by the gencat program.  */
++#define NL_SETD 1
++
++/* Value for FLAG parameter of `catgets' to say we want XPG4 compliance.  */
++#define NL_CAT_LOCALE 1
++
++#endif /* nl_types.h  */
++
++#endif /* __linux__ */
