@@ -1,0 +1,23 @@
+diff -Nrupa u-boot-mkimage-2010.03-1.orig/include/os_support.h u-boot-mkimage-2010.03-1/include/os_support.h
+--- u-boot-mkimage-2010.03-1.orig/include/os_support.h	2010-06-16 21:55:35.000000000 +0200
++++ u-boot-mkimage-2010.03-1/include/os_support.h	2012-01-19 16:23:49.000000000 +0100
+@@ -28,7 +28,7 @@
+ #include "mingw_support.h"
+ #endif
+ 
+-#ifdef __APPLE__
++#if defined(__APPLE__) && __DARWIN_C_LEVEL < 200809L
+ #include "getline.h"
+ #endif
+ 
+diff -Nrupa u-boot-mkimage-2010.03-1.orig/src/os_support.c u-boot-mkimage-2010.03-1/src/os_support.c
+--- u-boot-mkimage-2010.03-1.orig/src/os_support.c	2010-06-16 21:55:35.000000000 +0200
++++ u-boot-mkimage-2010.03-1/src/os_support.c	2012-01-19 16:23:22.000000000 +0100
+@@ -23,6 +23,6 @@
+ #ifdef __MINGW32__
+ #include "mingw_support.c"
+ #endif
+-#ifdef __APPLE__
++#if defined(__APPLE__) && __DARWIN_C_LEVEL < 200809L
+ #include "getline.c"
+ #endif
