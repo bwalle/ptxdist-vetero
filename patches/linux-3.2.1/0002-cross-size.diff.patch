@@ -1,7 +1,13 @@
+From: unknown author <unknown.author@example.com>
+Date: Mon, 23 Jan 2012 21:50:36 +0100
+Subject: [PATCH] cross-size.diff
+
 ---
  arch/arm/boot/compressed/Makefile |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ 1 files changed, 1 insertions(+), 1 deletions(-)
 
+diff --git a/arch/arm/boot/compressed/Makefile b/arch/arm/boot/compressed/Makefile
+index 21f56ff..efb0172 100644
 --- a/arch/arm/boot/compressed/Makefile
 +++ b/arch/arm/boot/compressed/Makefile
 @@ -126,7 +126,7 @@ ccflags-y := -fpic -fno-builtin -I$(obj)
