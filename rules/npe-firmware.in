@@ -1,0 +1,7 @@
+## SECTION=project_specific
+
+config NPE_FIRMWARE
+	tristate
+	prompt "npe-firmware"
+	help
+	  FIXME
