@@ -1,0 +1,16 @@
+---
+ arch/arm/mach-ixp4xx/nslu2-setup.c |    3 +++
+ 1 file changed, 3 insertions(+)
+
+--- a/arch/arm/mach-ixp4xx/nslu2-setup.c
++++ b/arch/arm/mach-ixp4xx/nslu2-setup.c
+@@ -77,6 +77,9 @@ static struct i2c_board_info __initdata
+ 	{
+ 		I2C_BOARD_INFO("x1205", 0x6f),
+ 	},
++	{
++		I2C_BOARD_INFO("bmp085", 0x77),
++	},
+ };
+ 
+ static struct gpio_led nslu2_led_pins[] = {

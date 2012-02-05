@@ -5,3 +5,4 @@
 0003-Add-Debian-patch-to-fix-build-on-ixp4xx.patch
 # 5b35de1a847df61ccb6f781cd0746fb1  - git-ptx-patches magic
 0004-ixp4xx_crypto.diff
+0005-nslu2-bmp085.diff
