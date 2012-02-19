@@ -1,0 +1,48 @@
+From: unknown author <unknown.author@example.com>
+Date: Mon, 23 Jan 2012 21:50:36 +0100
+Subject: [PATCH] dockstar-i2c.diff
+
+---
+ arch/arm/mach-kirkwood/dockstar-setup.c |   12 ++++++++++++
+ 1 files changed, 12 insertions(+), 0 deletions(-)
+
+diff --git a/arch/arm/mach-kirkwood/dockstar-setup.c b/arch/arm/mach-kirkwood/dockstar-setup.c
+index e4d199b..8ee3d27 100644
+--- a/arch/arm/mach-kirkwood/dockstar-setup.c
++++ b/arch/arm/mach-kirkwood/dockstar-setup.c
+@@ -15,6 +15,7 @@
+ #include <linux/mtd/partitions.h>
+ #include <linux/mv643xx_eth.h>
+ #include <linux/gpio.h>
++#include <linux/i2c.h>
+ #include <linux/leds.h>
+ #include <asm/mach-types.h>
+ #include <asm/mach/arch.h>
+@@ -75,9 +76,17 @@ static unsigned int dockstar_mpp_config[] __initdata = {
+ 	MPP29_GPIO,	/* USB Power Enable */
+ 	MPP46_GPIO,	/* LED green */
+ 	MPP47_GPIO,	/* LED orange */
++	MPP8_TW0_SDA,	/* I2C data */
++	MPP9_TW0_SCK,	/* I2C clock */
+ 	0
+ };
+ 
++static struct i2c_board_info __initdata i2c_board_info[] = {
++	{
++		I2C_BOARD_INFO("bmp085", 0x77),
++	},
++};
++
+ static void __init dockstar_init(void)
+ {
+ 	/*
+@@ -99,6 +108,9 @@ static void __init dockstar_init(void)
+ 	kirkwood_ge00_init(&dockstar_ge00_data);
+ 
+ 	platform_device_register(&dockstar_leds);
++
++	i2c_register_board_info(0, i2c_board_info, ARRAY_SIZE(i2c_board_info));
++	kirkwood_i2c_init();
+ }
+ 
+ MACHINE_START(DOCKSTAR, "Seagate FreeAgent DockStar")
