@@ -3,7 +3,8 @@
 0001-dockstar-i2c.diff.patch
 0002-cross-size.diff.patch
 0003-Add-Debian-patch-to-fix-build-on-ixp4xx.patch
-# 5b35de1a847df61ccb6f781cd0746fb1  - git-ptx-patches magic
-0004-ixp4xx_crypto.diff
-0005-nslu2-bmp085.diff
-0006-nslu2-little-endian.diff
+0004-ixp4xx_crypto.diff.patch
+0005-nslu2-bmp085.diff.patch
+0006-nslu2-little-endian.diff.patch
+0007-misc-bmp085-Handle-jiffies-overflow-correctly.patch
+# eda0506d7f8353571b9f326c2033c851  - git-ptx-patches magic
