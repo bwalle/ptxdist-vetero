@@ -4,9 +4,13 @@
 #
 
 NTPSERVER=@HOST@
-. /dev/shm/udhcpc.config
-if [ -n "$DHCP_NTPSERVER" ] ; then
-	NTPSERVER="$DHCP_NTPSERVER"
+UDHCPC_CONFIG=/dev/shm/udhcpc.config
+
+if [ -r "$UDHCPC_CONFIG" ] ; then
+    . "$UDHCPC_CONFIG"
+    if [ -n "$DHCP_NTPSERVER" ] ; then
+        NTPSERVER="$DHCP_NTPSERVER"
+    fi
 fi
 
 case $1 in
