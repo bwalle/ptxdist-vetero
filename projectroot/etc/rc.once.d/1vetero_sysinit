@@ -13,3 +13,10 @@ if [ -r "$SSH_KEYS" ] ; then
     fi
     cat "$SSH_KEYS" >> "$AUTHORIZED_KEYS"
 fi
+
+NETWORK_INTERFACES=/data/network_interfaces
+
+if [ -r "$NETWORK_INTERFACES" ] ; then
+    echo "Custom network configuration found. Copying to /etc"
+    cp "$NETWORK_INTERFACES" /etc/network/interfaces
+fi
