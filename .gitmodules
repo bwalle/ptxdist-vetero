@@ -1,0 +1,3 @@
+[submodule "local_src/vetero.git"]
+	path = local_src/vetero.git
+	url = https://bitbucket.org/bwalle/vetero.git
