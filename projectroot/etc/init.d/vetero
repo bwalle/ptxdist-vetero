@@ -104,6 +104,17 @@ generate_configuration()
     if [ -n "$VETERO_REPORT_TITLE_COLOR2" ] ; then
         echo >>"$TEMP_CONFIGURATION" "report_title_color2='$VETERO_REPORT_TITLE_COLOR2'"
     fi
+
+    #
+    # sensor configuration
+    #
+
+    if [ -n "$VETERO_SENSOR_TYPE" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "sensor_type=$VETERO_SENSOR_TYPE"
+    fi
+    if [ -n "$VETERO_SENSOR_NUMBER" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "sensor_number=$VETERO_SENSOR_NUMBER"
+    fi
     if [ -n "$VETERO_PRESSURE_SENSOR_I2C_BUS" ] ; then
         echo >>"$TEMP_CONFIGURATION" "pressure_sensor_i2c_bus=$VETERO_PRESSURE_SENSOR_I2C_BUS"
     fi
