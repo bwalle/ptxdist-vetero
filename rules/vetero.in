@@ -7,6 +7,7 @@ config VETERO
         select LIBCONFUSE
         select SQLITE
         select ZLIB
+        select SERDISPLIB
 	help
 	  FIXME
 
