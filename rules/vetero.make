@@ -17,9 +17,9 @@ PACKAGES-$(PTXCONF_VETERO) += vetero
 # Paths and names
 #
 VETERO		:= vetero
-VETERO_VERSION	:= 0.4.6
-VETERO_URL		:= file://$(PTXDIST_WORKSPACE)/local_src/$(VETERO).git
-VETERO_DIR		:= $(BUILDDIR)/$(VETERO)
+VETERO_VERSION	:= 0.4.7
+VETERO_URL	:= file://$(PTXDIST_WORKSPACE)/local_src/$(VETERO).git
+VETERO_DIR	:= $(BUILDDIR)/$(VETERO)
 VETERO_LICENSE	:= unknown
 
 # ----------------------------------------------------------------------------
