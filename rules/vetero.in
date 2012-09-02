@@ -6,6 +6,7 @@ config VETERO
 	select HOST_CMAKE
         select LIBCONFUSE
         select SQLITE
+        select ZLIB
 	help
 	  FIXME
 
