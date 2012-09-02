@@ -4,7 +4,7 @@ Subject: [PATCH] dockstar-i2c.diff
 
 ---
  arch/arm/mach-kirkwood/dockstar-setup.c |   12 ++++++++++++
- 1 files changed, 12 insertions(+), 0 deletions(-)
+ 1 file changed, 12 insertions(+)
 
 diff --git a/arch/arm/mach-kirkwood/dockstar-setup.c b/arch/arm/mach-kirkwood/dockstar-setup.c
 index e4d199b..8ee3d27 100644

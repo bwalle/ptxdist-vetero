@@ -13,7 +13,7 @@ drivers/crypto/ixp4xx_crypto.c:1503:15: error: expected declaration specifiers o
 drivers/crypto/ixp4xx_crypto.c:1504:20: error: expected declaration specifiers or '...' before string constant
 ---
  drivers/crypto/ixp4xx_crypto.c |    1 +
- 1 files changed, 1 insertions(+), 0 deletions(-)
+ 1 file changed, 1 insertion(+)
 
 diff --git a/drivers/crypto/ixp4xx_crypto.c b/drivers/crypto/ixp4xx_crypto.c
 index 4c20c5b..45704be 100644

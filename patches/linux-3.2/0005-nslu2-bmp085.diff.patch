@@ -4,7 +4,7 @@ Subject: [PATCH] nslu2-bmp085.diff
 
 ---
  arch/arm/mach-ixp4xx/nslu2-setup.c |    3 +++
- 1 files changed, 3 insertions(+), 0 deletions(-)
+ 1 file changed, 3 insertions(+)
 
 diff --git a/arch/arm/mach-ixp4xx/nslu2-setup.c b/arch/arm/mach-ixp4xx/nslu2-setup.c
 index ac81ccb..321f44b 100644
