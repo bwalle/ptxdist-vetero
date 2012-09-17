@@ -8,6 +8,7 @@ config VETERO
         select SQLITE
         select ZLIB
         select SERDISPLIB
+        select READLINE
 	help
 	  FIXME
 
