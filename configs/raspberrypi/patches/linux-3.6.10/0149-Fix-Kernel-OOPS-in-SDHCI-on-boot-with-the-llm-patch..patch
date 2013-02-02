@@ -1,0 +1,45 @@
+From: popcornmix <popcornmix@gmail.com>
+Date: Sat, 22 Sep 2012 18:56:57 +0100
+Subject: [PATCH] Fix Kernel OOPS in SDHCI on boot with the llm patch. Thanks
+ ddv2005
+
+---
+ drivers/mmc/host/sdhci.c | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/mmc/host/sdhci.c b/drivers/mmc/host/sdhci.c
+index 4500ef7..9b7a727 100644
+--- a/drivers/mmc/host/sdhci.c
++++ b/drivers/mmc/host/sdhci.c
+@@ -144,9 +144,9 @@ void sdhci_spin_unlock(struct sdhci_host *host)
+ 	if(enable_llm)
+ 	{
+ 		local_irq_disable();
+-		enable_irq(host->irq);
+ 		if(host->second_irq)
+ 			enable_irq(host->second_irq);
++		enable_irq(host->irq);
+ 	}
+ #endif
+ 	spin_unlock(&host->lock);
+@@ -178,9 +178,9 @@ void sdhci_spin_unlock_irqrestore(struct sdhci_host *host,unsigned long flags)
+ 	if(enable_llm)
+ 	{
+ 		local_irq_disable();
+-		enable_irq(host->irq);
+ 		if(host->second_irq)
+ 			enable_irq(host->second_irq);
++		enable_irq(host->irq);
+ 	}
+ #endif
+ 	spin_unlock_irqrestore(&host->lock,flags);
+@@ -291,9 +291,7 @@ static void sdhci_reset(struct sdhci_host *host, u8 mask)
+ 			return;
+ 		}
+ 		timeout--;
+-		sdhci_spin_enable_schedule(host);
+ 		mdelay(1);
+-		sdhci_spin_disable_schedule(host);
+ 	}
+ 
+ 	if (host->ops->platform_reset_exit)

@@ -1,5 +1,11 @@
 #!/bin/sh
 
+if [ -b /dev/mmcblk0p3 ] ; then
+    DATAPARTITION=/dev/mmcblk0p3
+else
+    DATAPARTITION=/dev/sda2
+fi
+
 if [ ! -d /data ] ; then
     mkdir /data
 fi
@@ -17,7 +23,7 @@ else
 fi
 
 echo -n "Creating vfat partition in /dev/sda2... "
-mkfs.vfat -n VETERODATA /dev/sda2 >> /dev/null 2>&1
+mkfs.vfat -n VETERODATA "$DATAPARTITION" >> /dev/null 2>&1
 if [ $? -eq 0 ] ; then
     echo "done"
 else
