@@ -18,5 +18,5 @@ none    /var/lock               tmpfs   defaults,mode=0755,uid=0,gid=0  0 0
 none    /var/tmp                tmpfs   defaults,mode=1777,uid=0,gid=0  0 0
 
 # custom
-/dev/mmcblk0p1 /boot                 vfat    auto                            0 0
+/dev/mmcblk0p1 /boot                 vfat    defaults                        0 0
 /dev/mmcblk0p3 /data                 vfat    noauto,noatime                  0 0
