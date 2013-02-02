@@ -1,0 +1,51 @@
+#!/bin/sh
+
+echo -n "Waiting for eth0 to come up"
+timeout=0
+while ! [ -d /sys/class/net/eth0 ] && [ $timeout -lt 10 ] ; do
+	echo -n "."
+	sleep 1
+	timeout=$(expr $timeout + 1)
+done
+
+if [ -d /sys/class/net/eth0 ] ; then
+	echo "DONE"
+else
+	echo "TIMEOUT"
+fi
+
+echo "starting network interfaces..."
+
+echo "starting network interfaces..."
+
+grep "nfsroot" /proc/cmdline > /dev/null
+
+if [ $? != 0 ]; then
+	ifup -a
+else
+	# We are doing nfsroot. We cannot simply call ifup -a
+	# here because we will run into trouble with dhcp.
+	# So we call ifup for every interface except the one
+	# we are doing nfsroot on.
+	#
+	if [ ! -f /etc/network/interfaces ]; then
+		exit 0
+	fi
+
+	ifaces=$(grep "^auto" /etc/network/interfaces)
+
+	for i in $ifaces; do
+		if [ "$i" = auto ]; then
+			continue
+		fi
+
+		ifconfig | grep "^$i"
+
+		if [ $? != 0 ]; then
+			ifup "$i"
+		fi
+	done
+fi
+
+exit 0
+
