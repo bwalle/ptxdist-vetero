@@ -12,6 +12,10 @@ fi
 mount -o remount,noatime /
 mkdir /dev/shm
 
+if ! [ -d /dev/pts ] ; then
+	mkdir /dev/pts
+fi
+
 echo -n "mounting filesystems..."
 mount -a 2>/dev/null
 echo "done."
