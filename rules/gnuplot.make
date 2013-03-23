@@ -17,6 +17,7 @@ PACKAGES-$(PTXCONF_GNUPLOT) += gnuplot
 # Paths and names
 #
 GNUPLOT_VERSION	:= 4.6.2
+GNUPLOT_MAJ_VER := $(shell echo $(GNUPLOT_VERSION) | cut -d . -f 1-2)
 GNUPLOT_MD5	:= 060e0a77cabb6d6055c5917b0f0b5769
 GNUPLOT		:= gnuplot-$(GNUPLOT_VERSION)
 GNUPLOT_SUFFIX	:= tar.gz
@@ -105,19 +106,23 @@ $(STATEDIR)/gnuplot.targetinstall:
 	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/bin/gnuplot)
 
 ifdef PTXCONF_GNUPLOT_HELP
-	@$(call install_copy, gnuplot, 0, 0, 0644, -, /usr/share/gnuplot/4.4/gnuplot.gih)
+	@$(call install_copy, gnuplot, 0, 0, 0644, -, \
+		/usr/share/gnuplot/$(GNUPLOT_MAJ_VER)/gnuplot.gih)
 endif
 
 ifdef PTXCONF_GNUPLOT_POSTSCRIPT
-	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/PostScript)
+	@$(call install_tree, gnuplot, 0, 0, -, \
+		/usr/share/gnuplot/$(GNUPLOT_MAJ_VER)/PostScript)
 endif
 
 ifdef PTXCONF_GNUPLOT_JS
-	@$(call install_tree, gnuplot, 0, 0, -, /usr/share/gnuplot/4.4/js)
+	@$(call install_tree, gnuplot, 0, 0, -, \
+		/usr/share/gnuplot/$(GNUPLOT_MAJ_VER)/js)
 endif
 
 ifdef PTXCONF_GNUPLOT_X
-	@$(call install_copy, gnuplot, 0, 0, 0755, -, /usr/libexec/gnuplot/4.4/gnuplot_x11)
+	@$(call install_copy, gnuplot, 0, 0, 0755, -, \
+		/usr/libexec/gnuplot/$(GNUPLOT_MAJ_VER)/gnuplot_x11)
 endif
 
 	@$(call install_finish, gnuplot)
