@@ -18,7 +18,7 @@ PTXCONF__platformconfig_MAGIC__=y
 #
 # ------------------------------------
 #
-PTXCONF_PLATFORM="pengutronix-raspberrypi"
+PTXCONF_PLATFORM="raspberrypi"
 PTXCONF_PLATFORM_VERSION="-2013.03.0"
 
 #
