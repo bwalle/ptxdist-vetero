@@ -1,9 +1,8 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2013.04.0
+# PTXdist 2013.05.0
 #
 PTXCONF_MODULES=y
-# PTXCONF_HOST_LIBPCRE is not set
 PTXCONF_VETERO=y
 
 #
@@ -36,7 +35,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_CONFIGFILE_VERSION="2013.04.0"
+PTXCONF_CONFIGFILE_VERSION="2013.05.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -56,6 +55,7 @@ PTXCONF__ptxconfig_MAGIC__=y
 # PTXCONF_HOST_PACKAGE_MANAGEMENT_IPKG is not set
 PTXCONF_HOST_PACKAGE_MANAGEMENT_OPKG=y
 PTXCONF_HOST_PACKAGE_MANAGEMENT="opkg"
+# PTXCONF_HOST_QEMU is not set
 # PTXCONF_HOST_TESTFRAMEWORK is not set
 PTXCONF_HOST_ACL=y
 # PTXCONF_HOST_APACHE2 is not set
@@ -103,6 +103,7 @@ PTXCONF_HOST_FIGLET=y
 # PTXCONF_HOST_LIBGD is not set
 # PTXCONF_HOST_LIBICONV is not set
 # PTXCONF_HOST_LIBLZO is not set
+# PTXCONF_HOST_LIBPCRE is not set
 # PTXCONF_HOST_LIBPNG is not set
 # PTXCONF_HOST_LIBPTHREAD_STUBS is not set
 # PTXCONF_HOST_LIBSELINUX is not set
@@ -1598,7 +1599,14 @@ PTXCONF_COREUTILS_GROUPS=y
 # PTXCONF_CPUFREQUTILS is not set
 # PTXCONF_DAEMONIZE is not set
 # PTXCONF_DASH is not set
-# PTXCONF_DEVICEKIT_DISKS is not set
+
+#
+# devicekit conflicts with BusyBox' mount!
+#
+
+#
+# devicekit conflicts with BusyBox' umount!
+#
 # PTXCONF_DFU_UTIL is not set
 # PTXCONF_DIALOG is not set
 # PTXCONF_DIFFUTILS is not set
@@ -1768,7 +1776,14 @@ PTXCONF_MTD_UTILS_MTDINFO=y
 # PTXCONF_TREE is not set
 # PTXCONF_U_BOOT_TOOLS is not set
 # PTXCONF_UDEV is not set
-# PTXCONF_UDISKS is not set
+
+#
+# udisks conflicts with BusyBox' mount!
+#
+
+#
+# udisks conflicts with BusyBox' umount!
+#
 # PTXCONF_UPSTART is not set
 # PTXCONF_USB_MODESWITCH is not set
 # PTXCONF_USBUTILS is not set
@@ -2303,7 +2318,14 @@ PTXCONF_NCURSES_FORM=y
 # PTXCONF_NCURSES_MENU is not set
 # PTXCONF_NCURSES_PANEL is not set
 # PTXCONF_NICKEL is not set
-# PTXCONF_OWFS is not set
+
+#
+# owfs conflicts with BusyBox' mount!
+#
+
+#
+# owfs conflicts with BusyBox' umount!
+#
 # PTXCONF_POCO is not set
 # PTXCONF_POLICYKIT is not set
 # PTXCONF_POLKIT is not set
@@ -2337,13 +2359,20 @@ PTXCONF_ZLIB=y
 # PTXCONF_ZLIB_STATIC is not set
 
 #
+# Security                      
+#
+
+#
 # SELinux                       
 #
+# PTXCONF_IMA_EVM_UTILS is not set
+# PTXCONF_KEYUTILS is not set
 # PTXCONF_LIBSELINUX is not set
 # PTXCONF_LIBSEMANAGE is not set
 # PTXCONF_LIBSEPOL is not set
 # PTXCONF_POLICYCOREUTILS is not set
 # PTXCONF_SEPOLGEN is not set
+# PTXCONF_TOMOYO_TOOLS is not set
 
 #
 # Middleware                    
@@ -2389,7 +2418,6 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_IOZONE is not set
 # PTXCONF_IPERF is not set
 # PTXCONF_LMBENCH is not set
-# PTXCONF_LTP is not set
 # PTXCONF_MBW is not set
 # PTXCONF_PELTS_TESTS is not set
 # PTXCONF_RT_TESTS is not set
@@ -2440,13 +2468,13 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_LIBFSL_VPU is not set
 
 #
-# gstreamer 0.11                
+# gstreamer 1.0                 
 #
-# PTXCONF_GST_PLUGINS_BAD11 is not set
-# PTXCONF_GST_PLUGINS_BASE11 is not set
-# PTXCONF_GST_PLUGINS_GOOD11 is not set
-# PTXCONF_GST_PLUGINS_UGLY11 is not set
-# PTXCONF_GSTREAMER11 is not set
+# PTXCONF_GST_PLUGINS_BAD1 is not set
+# PTXCONF_GST_PLUGINS_BASE1 is not set
+# PTXCONF_GST_PLUGINS_GOOD1 is not set
+# PTXCONF_GST_PLUGINS_UGLY1 is not set
+# PTXCONF_GSTREAMER1 is not set
 
 #
 # gtk+ & friends                
@@ -2534,6 +2562,7 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_LIBVORBIS is not set
 # PTXCONF_LIBXKBCOMMON is not set
 # PTXCONF_MTDEV is not set
+# PTXCONF_OPUS is not set
 # PTXCONF_ORC is not set
 # PTXCONF_PIXMAN is not set
 # PTXCONF_RTMPDUMP is not set
@@ -2541,6 +2570,7 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_SVGALIB is not set
 # PTXCONF_TSLIB is not set
 # PTXCONF_V4L_UTILS is not set
+# PTXCONF_VO_AACENC is not set
 # PTXCONF_XORG is not set
 
 #
