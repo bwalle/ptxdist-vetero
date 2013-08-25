@@ -1,0 +1,48 @@
+From: hutorny <eugene@hutorny.in.ua>
+Date: Mon, 13 May 2013 10:26:14 +0300
+Subject: [PATCH] Update bcm2708.c to use CONFIG_BCM2708_SPIDEV rather than
+ CONFIG_SPI
+
+---
+ arch/arm/mach-bcm2708/Kconfig   | 7 +++++++
+ arch/arm/mach-bcm2708/bcm2708.c | 4 ++--
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm/mach-bcm2708/Kconfig b/arch/arm/mach-bcm2708/Kconfig
+index 2a24db6..1dfd0a4 100644
+--- a/arch/arm/mach-bcm2708/Kconfig
++++ b/arch/arm/mach-bcm2708/Kconfig
+@@ -38,4 +38,11 @@ config BCM2708_DMAER
+         help
+           Enable DMA helper for accelerating X composition
+ 
++config BCM2708_SPIDEV
++	bool "Bind spidev to SPI0 master"
++	depends on MACH_BCM2708  
++	depends on SPI
++        default y
++		help 
++			Binds spidev driver to the SPI0 master  
+ endmenu
+diff --git a/arch/arm/mach-bcm2708/bcm2708.c b/arch/arm/mach-bcm2708/bcm2708.c
+index 1ed4d73..68c577a 100644
+--- a/arch/arm/mach-bcm2708/bcm2708.c
++++ b/arch/arm/mach-bcm2708/bcm2708.c
+@@ -545,7 +545,7 @@ static struct platform_device bcm2708_spi_device = {
+ 	.resource = bcm2708_spi_resources,
+ };
+ 
+-#ifdef CONFIG_SPI
++#ifdef CONFIG_BCM2708_SPIDEV
+ static struct spi_board_info bcm2708_spi_devices[] = {
+ #ifdef CONFIG_SPI_SPIDEV
+ 	{
+@@ -715,7 +715,7 @@ void __init bcm2708_init(void)
+ 	system_rev = boardrev;
+ 	system_serial_low = serial;
+ 
+-#ifdef CONFIG_SPI
++#ifdef CONFIG_BCM2708_SPIDEV
+ 	spi_register_board_info(bcm2708_spi_devices,
+ 			ARRAY_SIZE(bcm2708_spi_devices));
+ #endif

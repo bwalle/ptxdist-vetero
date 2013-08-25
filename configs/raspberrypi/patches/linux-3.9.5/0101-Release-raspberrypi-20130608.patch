@@ -1,0 +1,22 @@
+From: Michael Olbrich <m.olbrich@pengutronix.de>
+Date: Sat, 8 Jun 2013 23:29:27 +0200
+Subject: [PATCH] Release raspberrypi/20130608
+
+Signed-off-by: Michael Olbrich <m.olbrich@pengutronix.de>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 8818c95..2c49848 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,7 @@
+ VERSION = 3
+ PATCHLEVEL = 9
+ SUBLEVEL = 5
+-EXTRAVERSION =
++EXTRAVERSION =-20130608
+ NAME = Unicycling Gorilla
+ 
+ # *DOCUMENTATION*

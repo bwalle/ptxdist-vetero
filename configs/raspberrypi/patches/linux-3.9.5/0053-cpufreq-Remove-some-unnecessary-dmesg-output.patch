@@ -1,0 +1,21 @@
+From: popcornmix <popcornmix@gmail.com>
+Date: Thu, 28 Mar 2013 01:20:34 +0000
+Subject: [PATCH] cpufreq: Remove some unnecessary dmesg output.
+
+---
+ drivers/cpufreq/bcm2835-cpufreq.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/cpufreq/bcm2835-cpufreq.c b/drivers/cpufreq/bcm2835-cpufreq.c
+index aa6fc66..6ff1edb 100755
+--- a/drivers/cpufreq/bcm2835-cpufreq.c
++++ b/drivers/cpufreq/bcm2835-cpufreq.c
+@@ -196,7 +196,7 @@ static int bcm2835_cpufreq_driver_target(struct cpufreq_policy *policy, unsigned
+ 		policy->cur = bcm2835_cpufreq_get_clock(VCMSG_GET_CLOCK_RATE);
+ 		return -EINVAL;
+ 	}
+-	print_info("Freq %d->%d (min=%d max=%d target=%d request=%d)", cur, policy->cur, policy->min, policy->max, target_freq, target);
++	print_debug("Freq %d->%d (min=%d max=%d target=%d request=%d)", cur, policy->cur, policy->min, policy->max, target_freq, target);
+ 	return 0;
+ }
+ 
