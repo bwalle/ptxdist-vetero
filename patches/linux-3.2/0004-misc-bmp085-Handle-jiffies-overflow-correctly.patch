@@ -7,7 +7,7 @@ arithmetic, the jiffies overflow is handled correctly.
 
 Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
 ---
- drivers/misc/bmp085.c |    3 ++-
+ drivers/misc/bmp085.c | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/misc/bmp085.c b/drivers/misc/bmp085.c
