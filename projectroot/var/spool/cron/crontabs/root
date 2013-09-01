@@ -1,1 +1,2 @@
 20 22 * * * /usr/sbin/veterobackup
+*/5 * * * * [ -r /data/cron.5min ]  && sh /data/cron.5min
