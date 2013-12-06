@@ -173,11 +173,24 @@ custom_hostname()
     fi
 }
 
+wait_for_device()
+{
+    local count=0
+    local max_wait=10 # seconds
+
+    while ! lsusb | grep -q 'ID 10c4:ea60' && [ "$count" -lt "$max_wait" ] ; do
+        sleep 1
+        count=$(expr $count + 1)
+    done
+}
+
 case $1 in
 
     start)
         generate_configuration
         custom_hostname
+        echo "Waiting for USB device to appear..."
+        wait_for_device
         echo "Starting veterod..."
         start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
         ;;
