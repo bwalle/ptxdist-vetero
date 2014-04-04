@@ -1,10 +1,7 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.02.0
+# PTXdist 2014.03.0
 #
-PTXCONF_PLATFORMCONFIG_VERSION="2014.02.0"
-PTXCONF_RUNTIME=y
-PTXCONF_BUILDTIME=y
 PTXCONF__platformconfig_MAGIC__=y
 
 #
@@ -20,6 +17,9 @@ PTXCONF__platformconfig_MAGIC__=y
 #
 PTXCONF_PLATFORM="dockstar"
 PTXCONF_PLATFORM_VERSION="-2011.01.0"
+PTXCONF_RUNTIME=y
+PTXCONF_BUILDTIME=y
+PTXCONF_PLATFORMCONFIG_VERSION="2014.03.0"
 
 #
 # architecture                  
@@ -125,7 +125,6 @@ PTXCONF_KERNEL_CONFIG="kernelconfig-${PTXCONF_KERNEL_VERSION}"
 # Development features
 #
 PTXCONF_KERNEL_EXTRA_MAKEVARS="CONFIG_DEBUG_SECTION_MISMATCH=y"
-# PTXCONF_HOST_DTC is not set
 # PTXCONF_DTC is not set
 
 #
@@ -165,11 +164,6 @@ PTXCONF_U_BOOT_IMAGE_NAME="u-boot.kwb"
 # PTXCONF_U_BOOT_INSTALL_ELF is not set
 # PTXCONF_U_BOOT_INSTALL_MLO is not set
 # PTXCONF_X_LOAD is not set
-
-#
-# flash                         
-#
-PTXCONF_FLASH_BLOCKSIZE="128k"
 
 #
 # image creation options        
