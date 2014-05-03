@@ -1,0 +1,22 @@
+Index: linux-3.14.2/arch/arm/boot/dts/kirkwood-dockstar.dts
+===================================================================
+--- linux-3.14.2.orig/arch/arm/boot/dts/kirkwood-dockstar.dts	2014-04-27 02:19:26.000000000 +0200
++++ linux-3.14.2/arch/arm/boot/dts/kirkwood-dockstar.dts	2014-05-03 20:44:03.806804072 +0200
+@@ -31,6 +31,17 @@
+ 				marvell,function = "gpio";
+ 			};
+ 		};
++		i2c@11000 {
++			status = "okay";
++			clock-frequency = <400000>;
++			pinctrl-0 = <&pmx_twsi0>;
++			pinctrl-names = "default";
++
++			bmp085: bmp085@77 {
++				compatible = "bmp085";
++				reg = <0x77>;
++			};
++		};
+ 		serial@12000 {
+ 			status = "ok";
+ 		};
