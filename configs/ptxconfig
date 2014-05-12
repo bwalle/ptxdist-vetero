@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.04.0
+# PTXdist 2014.05.0
 #
 PTXCONF_VETERO=y
 
@@ -46,7 +46,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_CONFIGFILE_VERSION="2014.04.0"
+PTXCONF_CONFIGFILE_VERSION="2014.05.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -1659,7 +1659,6 @@ PTXCONF_COREUTILS_GROUPS=y
 #
 # BusyBox' gunzip is selected!
 #
-# PTXCONF_HAL is not set
 # PTXCONF_HTOP is not set
 PTXCONF_I2C_TOOLS=y
 # PTXCONF_INITNG is not set
@@ -1882,6 +1881,17 @@ PTXCONF_UTIL_LINUX_NG_CFDISK=y
 # PTXCONF_LUA is not set
 # PTXCONF_LUAEXPAT is not set
 # PTXCONF_PERL is not set
+
+#
+# perl Extra Modules            
+#
+# PTXCONF_DIGEST_HMAC_PERL is not set
+# PTXCONF_IO_SOCKET_INET6_PERL is not set
+# PTXCONF_MUNIN is not set
+# PTXCONF_NET_DNS_PERL is not set
+# PTXCONF_NET_IP_PERL is not set
+# PTXCONF_NET_SERVER_PERL is not set
+# PTXCONF_SOCKET6_PERL is not set
 # PTXCONF_PHP5 is not set
 # PTXCONF_PYTHON is not set
 
@@ -1917,6 +1927,7 @@ PTXCONF_UTIL_LINUX_NG_CFDISK=y
 # PTXCONF_APR_UTIL is not set
 # PTXCONF_APR is not set
 # PTXCONF_AVAHI is not set
+# PTXCONF_BATCTL is not set
 # PTXCONF_BING is not set
 # PTXCONF_BOA is not set
 # PTXCONF_BRIDGE_UTILS is not set
@@ -2218,6 +2229,7 @@ PTXCONF_E2FSPROGS_INSTALL_MKFS_EXT4=y
 # PTXCONF_CANUTILS is not set
 # PTXCONF_CKERMIT is not set
 # PTXCONF_EFAX is not set
+# PTXCONF_HEIRLOOM_MAILX is not set
 # PTXCONF_IRSSI is not set
 # PTXCONF_LIBMATTHEW_JAVA is not set
 # PTXCONF_LIBSOCKETCAN is not set
@@ -2363,7 +2375,6 @@ PTXCONF_NCURSES_FORM=y
 # owfs conflicts with BusyBox' umount!
 #
 # PTXCONF_POCO is not set
-# PTXCONF_POLICYKIT is not set
 # PTXCONF_POLKIT is not set
 # PTXCONF_PROTOBUF is not set
 # PTXCONF_PSLIB is not set
@@ -2633,8 +2644,10 @@ PTXCONF_GNUPLOT=y
 #
 PTXCONF_STAGING=y
 # PTXCONF_ACPID is not set
+# PTXCONF_HAL is not set
 # PTXCONF_MPLAYER is not set
 # PTXCONF_MYODBC is not set
 # PTXCONF_MYSQL is not set
+# PTXCONF_POLICYKIT is not set
 # PTXCONF_SPLASHUTILS is not set
 # PTXCONF_UPSTART is not set
