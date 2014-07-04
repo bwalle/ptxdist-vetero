@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.05.0
+# PTXdist 2014.07.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="raspberrypi"
 PTXCONF_PLATFORM_VERSION="-2013.03.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2014.05.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2014.07.0"
 
 #
 # architecture                  
@@ -154,6 +154,11 @@ PTXCONF_BAREBOX_ARCH_STRING="arm"
 # PTXCONF_X_LOAD is not set
 
 #
+# bootloader spec entries       
+#
+# PTXCONF_BLSPEC_ENTRY is not set
+
+#
 # image creation options        
 #
 # PTXCONF_IMAGE_BOOT_MLO_VFAT is not set
@@ -214,7 +219,6 @@ PTXCONF_HOST_GENIMAGE=y
 # PTXCONF_HOST_LIBBLKID is not set
 # PTXCONF_HOST_LIBCAP is not set
 PTXCONF_HOST_LIBCONFUSE=y
-# PTXCONF_HOST_LIBICONV is not set
 PTXCONF_HOST_LIBKMOD=y
 # PTXCONF_HOST_LIBLZO is not set
 # PTXCONF_HOST_LIBUSB is not set
