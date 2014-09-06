@@ -179,6 +179,7 @@ PTXCONF_U_BOOT_IMAGE_NAME="u-boot.kwb"
 #
 # image creation options        
 #
+PTXCONF_IMAGE_UIMAGE_FDT=y
 # PTXCONF_IMAGE_BOOT_MLO_VFAT is not set
 # PTXCONF_IMAGE_CPIO is not set
 # PTXCONF_IMAGE_CPIO_GZ is not set

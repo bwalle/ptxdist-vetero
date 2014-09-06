@@ -1,0 +1,7 @@
+## SECTION=image
+
+config IMAGE_UIMAGE_FDT
+	tristate
+	prompt "Generate images/uImage (with fdt)"
+	help
+	  FIXME
