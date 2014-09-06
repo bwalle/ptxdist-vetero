@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.08.0
+# PTXdist 2014.09.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="raspberrypi"
 PTXCONF_PLATFORM_VERSION="-2013.03.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2014.08.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2014.09.0"
 
 #
 # architecture                  
@@ -185,7 +185,6 @@ PTXCONF_IMAGE_KERNEL_INSTALL_EARLY=y
 # PTXCONF_IMAGE_UBI is not set
 # PTXCONF_IMAGE_UBIFS is not set
 # PTXCONF_IMAGE_UIMAGE is not set
-PTXCONF_IMAGE_VFAT_TOOLS=y
 
 #
 # new image creation options    

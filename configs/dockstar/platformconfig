@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.08.0
+# PTXdist 2014.09.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="dockstar"
 PTXCONF_PLATFORM_VERSION="-2011.01.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2014.08.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2014.09.0"
 
 #
 # architecture                  
@@ -233,6 +233,7 @@ PTXCONF_IMAGE_UBIFS_ROOT_MAX_LEB_COUNT="512"
 # new image creation options    
 #
 # PTXCONF_IMAGE_BOOT_MLO is not set
+# PTXCONF_IMAGE_BOOT_VFAT is not set
 # PTXCONF_IMAGE_HDIMG is not set
 # PTXCONF_IMAGE_ROOT_CPIO_GZ is not set
 # PTXCONF_IMAGE_ROOT_CPIO is not set

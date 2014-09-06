@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.08.0
+# PTXdist 2014.09.0
 #
 PTXCONF_VETERO=y
 
@@ -46,7 +46,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_CONFIGFILE_VERSION="2014.08.0"
+PTXCONF_CONFIGFILE_VERSION="2014.09.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -2062,10 +2062,15 @@ PTXCONF_LIGHTTPD_PCRE=y
 #
 # modules                     
 #
+# PTXCONF_LIGHTTPD_MOD_ACCESS is not set
+# PTXCONF_LIGHTTPD_MOD_ACCESSLOG is not set
+# PTXCONF_LIGHTTPD_MOD_ALIAS is not set
+# PTXCONF_LIGHTTPD_MOD_AUTH is not set
 # PTXCONF_LIGHTTPD_MOD_CML is not set
 # PTXCONF_LIGHTTPD_MOD_COMPRESS is not set
 # PTXCONF_LIGHTTPD_MOD_FASTCGI is not set
 # PTXCONF_LIGHTTPD_MOD_MAGNET is not set
+# PTXCONF_LIGHTTPD_MOD_REWRITE is not set
 # PTXCONF_LIGHTTPD_MOD_TRIGGER_B4_DL is not set
 # PTXCONF_LIGHTTPD_MOD_WEBDAV is not set
 PTXCONF_LIGHTTPD_MOD_EXTRA="mod_access mod_accesslog mod_auth"
@@ -2130,6 +2135,7 @@ PTXCONF_NTPCLIENT_NTPSERVER_NAME="pool.ntp.org"
 # PTXCONF_PPP is not set
 # PTXCONF_PROFTPD is not set
 # PTXCONF_PUREFTPD is not set
+# PTXCONF_PYTHON_DJANGO is not set
 # PTXCONF_RADVD is not set
 # PTXCONF_RSYNC is not set
 # PTXCONF_RSYNC3 is not set
@@ -2282,6 +2288,7 @@ PTXCONF_NANO=y
 PTXCONF_EXPAT=y
 # PTXCONF_FLEX is not set
 # PTXCONF_GETTEXT is not set
+# PTXCONF_GFLAGS is not set
 # PTXCONF_GPM is not set
 # PTXCONF_GPSD is not set
 # PTXCONF_ICU is not set
@@ -2481,6 +2488,7 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_PELTS_TESTS is not set
 # PTXCONF_RT_TESTS is not set
 # PTXCONF_TIOBENCH is not set
+# PTXCONF_UNIXBENCH is not set
 
 #
 # Games                         
@@ -2533,6 +2541,7 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_GST_PLUGINS_BASE1 is not set
 # PTXCONF_GST_PLUGINS_GOOD1 is not set
 # PTXCONF_GST_PLUGINS_UGLY1 is not set
+# PTXCONF_GSTREAMER_VAAPI1 is not set
 # PTXCONF_GSTREAMER1 is not set
 
 #
@@ -2614,10 +2623,15 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_LIBCACA is not set
 # PTXCONF_LIBDMTX is not set
 # PTXCONF_LIBDRM is not set
+# PTXCONF_LIBEPOXY is not set
+# PTXCONF_LIBEVDEV is not set
 # PTXCONF_LIBMPEG2 is not set
 # PTXCONF_LIBOGG is not set
+# PTXCONF_LIBPCIACCESS is not set
 # PTXCONF_LIBSNDFILE is not set
 # PTXCONF_LIBTHEORA is not set
+# PTXCONF_LIBVA_INTEL_DRIVER is not set
+# PTXCONF_LIBVA is not set
 # PTXCONF_LIBVORBIS is not set
 # PTXCONF_LIBXKBCOMMON is not set
 # PTXCONF_MESA_DEMOS is not set
@@ -2640,6 +2654,7 @@ PTXCONF_GNUPLOT=y
 # wayland                       
 #
 # PTXCONF_WAYLAND is not set
+# PTXCONF_WESTON is not set
 
 #
 # ------------------------------------
