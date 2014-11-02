@@ -2,4 +2,5 @@
 #tag:base --start-number 1
 0001-dockstar-Adjust-default-environment.patch
 0002-Dockstar-Don-t-allow-to-save-the-envionrment-in-NAND.patch
-# feeea8c28d13933405cbc202beec26c9  - git-ptx-patches magic
+0003-arm-arm-kirkwood-disable-l2c-before-linux-boot.patch
+# dacc14d6fa58f1a3c0e6ac238e39e80a  - git-ptx-patches magic

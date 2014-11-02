@@ -6,11 +6,11 @@ Mount the root file system readwritable and don't load an initrd.
 
 Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
 ---
- include/configs/dockstar.h |    6 ++----
- 1 files changed, 2 insertions(+), 4 deletions(-)
+ include/configs/dockstar.h | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
 
 diff --git a/include/configs/dockstar.h b/include/configs/dockstar.h
-index 249f93b..cf82ea0 100644
+index 249f93bf130f..cf82ea0e1373 100644
 --- a/include/configs/dockstar.h
 +++ b/include/configs/dockstar.h
 @@ -87,8 +87,7 @@

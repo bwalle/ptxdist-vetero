@@ -4,11 +4,11 @@ Subject: [PATCH] Dockstar: Don't allow to save the envionrment in NAND
 
 Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
 ---
- include/configs/dockstar.h |    5 -----
- 1 files changed, 0 insertions(+), 5 deletions(-)
+ include/configs/dockstar.h | 5 -----
+ 1 file changed, 5 deletions(-)
 
 diff --git a/include/configs/dockstar.h b/include/configs/dockstar.h
-index cf82ea0..ad87f8c 100644
+index cf82ea0e1373..ad87f8cb4b44 100644
 --- a/include/configs/dockstar.h
 +++ b/include/configs/dockstar.h
 @@ -65,12 +65,7 @@
