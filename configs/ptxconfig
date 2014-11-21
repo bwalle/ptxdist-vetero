@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.10.0
+# PTXdist 2014.11.0
 #
 PTXCONF_VETERO=y
 
@@ -46,7 +46,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 # PTXCONF_PROJECT_USE_DEVPKGS is not set
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_CONFIGFILE_VERSION="2014.10.0"
+PTXCONF_CONFIGFILE_VERSION="2014.11.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -208,6 +208,7 @@ PTXCONF_CROSS_PKG_CONFIG_WRAPPER=y
 # PTXCONF_MEMTEST is not set
 # PTXCONF_MEMTEST86P is not set
 # PTXCONF_MEMTESTER is not set
+# PTXCONF_OPENOCD is not set
 # PTXCONF_OPROFILE is not set
 
 #
@@ -1783,6 +1784,7 @@ PTXCONF_MTD_UTILS_MTDINFO=y
 # BusyBox' pstree is selected! (psmisc)
 #
 # PTXCONF_PV is not set
+# PTXCONF_RNG_TOOLS is not set
 # PTXCONF_SCHED_SWITCH is not set
 # PTXCONF_SCHEDTOOL is not set
 # PTXCONF_SCREEN is not set
@@ -1790,7 +1792,10 @@ PTXCONF_MTD_UTILS_MTDINFO=y
 #
 # BusyBox' sed selected
 #
-# PTXCONF_SETSERIAL is not set
+
+#
+# BusyBox' setserial is selected!
+#
 # PTXCONF_SMARTMONTOOLS is not set
 # PTXCONF_SUDO is not set
 # PTXCONF_SYSTEMD is not set
@@ -2179,6 +2184,7 @@ PTXCONF_SITECOPY_XML_EXPAT=y
 # Disk and File Utilities       
 #
 # PTXCONF_ACL is not set
+# PTXCONF_ARCHIVEMOUNT is not set
 # PTXCONF_ATTR is not set
 # PTXCONF_CIFS_UTILS is not set
 # PTXCONF_DDRESCUE is not set
@@ -2223,6 +2229,7 @@ PTXCONF_E2FSPROGS_INSTALL_MKFS_EXT4=y
 # PTXCONF_E2FSPROGS_INSTALL_MKLOSTANDFOUND is not set
 # PTXCONF_E2FSPROGS_INSTALL_RESIZE2FS is not set
 # PTXCONF_E2FSPROGS_INSTALL_TUNE2FS is not set
+# PTXCONF_F2FS_TOOLS is not set
 # PTXCONF_FAM is not set
 # PTXCONF_FUSE is not set
 # PTXCONF_HDPARM is not set
@@ -2306,6 +2313,7 @@ PTXCONF_LIBBLKID=y
 # PTXCONF_LIBCAP_NG is not set
 # PTXCONF_LIBCAP is not set
 # PTXCONF_LIBCGROUP is not set
+# PTXCONF_LIBCONFIG is not set
 PTXCONF_LIBCONFUSE=y
 # PTXCONF_LIBCONFUSE_STATIC is not set
 # PTXCONF_LIBDAEMON is not set

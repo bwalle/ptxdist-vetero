@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2014.09.0
+# PTXdist 2014.11.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="raspberrypi"
 PTXCONF_PLATFORM_VERSION="-2013.03.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2014.09.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2014.11.0"
 
 #
 # architecture                  
@@ -161,6 +161,7 @@ PTXCONF_BAREBOX_ARCH_STRING="arm"
 #
 # image creation options        
 #
+# PTXCONF_IMAGE_UIMAGE_FDT is not set
 # PTXCONF_IMAGE_BOOT_MLO_VFAT is not set
 # PTXCONF_IMAGE_CPIO is not set
 # PTXCONF_IMAGE_CPIO_GZ is not set
