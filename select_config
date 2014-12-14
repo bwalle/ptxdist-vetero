@@ -1,0 +1,33 @@
+#!/bin/bash
+
+usage()
+{
+    echo "Usage: $0 'dockstar'|'dockstar-update'|rpi"
+}
+
+case "$1" in
+    dockstar-update)
+        PLATFORMCONFIG=configs/dockstar-update/platformconfig
+        PTXCONFIG=configs/ptxconfig-update
+        ;;
+
+    dockstar)
+        PLATFORMCONFIG=configs/dockstar/platformconfig
+        PTXCONFIG=configs/ptxconfig
+        ;;
+
+    rpi)
+        PLATFORMCONFIG=configs/raspberrypi/platformconfig
+        PTXCONFIG=configs/ptxconfig
+        ;;
+
+    *)
+        usage
+        exit 1
+esac
+
+
+./p select "$PTXCONFIG"
+./p platform "$PLATFORMCONFIG"
+
+# vim: set sw=4 ts=4 et:
