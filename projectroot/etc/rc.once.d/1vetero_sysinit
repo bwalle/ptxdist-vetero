@@ -20,3 +20,10 @@ if [ -r "$NETWORK_INTERFACES" ] ; then
     echo "Custom network configuration found. Copying to /etc"
     cp "$NETWORK_INTERFACES" /etc/network/interfaces
 fi
+
+NETWORK_RESOLV_CONF=/data/network_resolv_conf
+
+if [ -r "$NETWORK_RESOLV_CONF" ] ; then
+    echo "Custom resolver configuration found. Copying to /etc"
+    cp "$NETWORK_RESOLV_CONF" /etc/resolv.conf
+fi
