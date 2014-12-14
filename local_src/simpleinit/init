@@ -1,0 +1,25 @@
+#!/bin/sh
+
+mount_virtual_filesystems()
+{
+    mount -t devtmpfs devtmpfs /dev
+    mount -t proc /proc
+    mount -t sysfs /sys
+}
+
+export PS1="(initramfs) "
+
+mount_virtual_filesystems
+
+if [ -r /init.local.pre ] ; then
+    . /init.local.pre
+fi
+
+if [ -r /init.local ] ; then
+    . /init.local
+fi
+
+echo "Starting a shell."
+exec sh -i
+
+# vim: set sw=4 ts=4 et:

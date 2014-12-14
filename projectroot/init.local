@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This is only used in the dockstar-update system.
+# So it's _very_ simple.
+
+export PATH=/usr/sbin:/sbin:/usr/bin:/bin
+
+echo "Configuring network"
+ifconfig eth0 192.168.0.205 255.255.255.0
+
+echo "Generating a SSH key"
+/etc/rc.once.d/dropbear start
+
+echo "Starting SSH server"
+/etc/init.d/dropbear start

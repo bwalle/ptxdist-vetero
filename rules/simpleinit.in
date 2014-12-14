@@ -1,0 +1,8 @@
+## SECTION=project_specific
+
+menuconfig SIMPLEINIT
+	bool
+	prompt "simpleinit                    "
+	help
+	  FIXME
+
