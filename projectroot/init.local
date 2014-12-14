@@ -6,7 +6,7 @@
 export PATH=/usr/sbin:/sbin:/usr/bin:/bin
 
 echo "Configuring network"
-ifconfig eth0 192.168.0.205 255.255.255.0
+ifconfig eth0 192.168.0.202 255.255.255.0
 
 echo "Generating a SSH key"
 /etc/rc.once.d/dropbear start
