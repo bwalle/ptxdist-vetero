@@ -1,8 +1,8 @@
-Index: linux-3.14.2/arch/arm/boot/dts/kirkwood-dockstar.dts
+Index: linux-3.18/arch/arm/boot/dts/kirkwood-dockstar.dts
 ===================================================================
---- linux-3.14.2.orig/arch/arm/boot/dts/kirkwood-dockstar.dts	2014-04-27 02:19:26.000000000 +0200
-+++ linux-3.14.2/arch/arm/boot/dts/kirkwood-dockstar.dts	2014-05-03 20:44:03.806804072 +0200
-@@ -31,6 +31,17 @@
+--- linux-3.18.orig/arch/arm/boot/dts/kirkwood-dockstar.dts
++++ linux-3.18/arch/arm/boot/dts/kirkwood-dockstar.dts
+@@ -32,6 +32,17 @@
  				marvell,function = "gpio";
  			};
  		};
