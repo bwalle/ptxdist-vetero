@@ -187,10 +187,16 @@ wait_for_device()
     done
 }
 
+set_environment()
+{
+    export LC_CTYPE=de_DE.UTF-8
+}
+
 start()
 {
     generate_configuration
     custom_hostname
+    set_environment
     echo "Waiting for USB device to appear..."
     wait_for_device
     echo "Starting veterod..."
