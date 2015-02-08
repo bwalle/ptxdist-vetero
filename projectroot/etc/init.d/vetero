@@ -187,20 +187,35 @@ wait_for_device()
     done
 }
 
+start()
+{
+    generate_configuration
+    custom_hostname
+    echo "Waiting for USB device to appear..."
+    wait_for_device
+    echo "Starting veterod..."
+    start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
+}
+
+stop()
+{
+    echo "Stopping veterod..."
+    start-stop-daemon -K -p "$PIDFILE"
+}
+
 case $1 in
 
     start)
-        generate_configuration
-        custom_hostname
-        echo "Waiting for USB device to appear..."
-        wait_for_device
-        echo "Starting veterod..."
-        start-stop-daemon -S -p "$PIDFILE" -x veterod  -- $VETEROD_OPTIONS
+        start
         ;;
 
     stop)
-        echo "Stopping veterod..."
-        start-stop-daemon -K -p "$PIDFILE"
+        stop
+        ;;
+
+    restart)
+        stop
+        start
         ;;
 esac
 
