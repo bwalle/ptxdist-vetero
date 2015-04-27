@@ -8,6 +8,7 @@ MODULES_FILE=/etc/modules
 
 # for loading firmware
 echo /sbin/mdev > /proc/sys/kernel/hotplug
+/sbin/mdev -s
 
 load_modules(){
 	# Loop over every line in /etc/modules.
