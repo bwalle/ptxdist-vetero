@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2015.08.0
+# PTXdist 2015.09.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="dockstar"
 PTXCONF_PLATFORM_VERSION="-2011.01.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2015.08.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2015.09.0"
 
 #
 # architecture                  
