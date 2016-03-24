@@ -18,12 +18,13 @@ fi
 
 DATE=`date +%Y-%m-%dT%H_%M_%S`
 curl -s -T /data/vetero.db "$BACKUP_URL/vetero-$DATE.db"
-if [ $? -eq 0 ] ; then
+rc=$?
+if [ $rc -eq 0 ] ; then
     log "Backup succeeded"
 else
     log "Backup failed"
 fi
 
-exit 0
+exit $rc
 
 # vim: set sw=4 ts=4 et:
