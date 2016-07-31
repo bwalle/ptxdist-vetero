@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2016.06.0
+# PTXdist 2016.07.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="dockstar-update"
 PTXCONF_PLATFORM_VERSION="-2014.12.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2016.06.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2016.07.0"
 
 #
 # architecture                  
@@ -161,6 +161,7 @@ PTXCONF_BAREBOX_ARCH_STRING="arm"
 #
 # i.MX HAB                      
 #
+# PTXCONF_HOST_IMX_CST is not set
 # PTXCONF_U_BOOT_V2 is not set
 # PTXCONF_U_BOOT is not set
 # PTXCONF_X_LOAD is not set
@@ -224,9 +225,12 @@ PTXCONF_IMAGE_KERNEL_INSTALL_LATE=y
 # PTXCONF_HOST_GENIMAGE is not set
 # PTXCONF_HOST_GENPART is not set
 # PTXCONF_HOST_GETTEXT is not set
+# PTXCONF_HOST_IMA_EVM_UTILS is not set
+# PTXCONF_HOST_KEYUTILS is not set
 # PTXCONF_HOST_LIBBLKID is not set
 # PTXCONF_HOST_LIBCAP is not set
 # PTXCONF_HOST_LIBCONFUSE is not set
+# PTXCONF_HOST_LIBKMOD is not set
 PTXCONF_HOST_LIBLZO=y
 # PTXCONF_HOST_LIBUSB is not set
 # PTXCONF_HOST_LIBUUID is not set
