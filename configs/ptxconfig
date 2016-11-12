@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2016.10.0
+# PTXdist 2016.11.0
 #
 # PTXCONF_SIMPLEINIT is not set
 PTXCONF_VETERO=y
@@ -61,7 +61,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
 PTXCONF_VIRTUAL=y
-PTXCONF_CONFIGFILE_VERSION="2016.10.0"
+PTXCONF_CONFIGFILE_VERSION="2016.11.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -1961,6 +1961,7 @@ PTXCONF_UTIL_LINUX_NG_CFDISK=y
 # BusyBox' blkid is selected!
 #
 # PTXCONF_UTIL_LINUX_NG_FINDFS is not set
+# PTXCONF_UTIL_LINUX_NG_WIPEFS is not set
 # PTXCONF_UTIL_LINUX_NG_ZRAMCTL is not set
 # PTXCONF_WATCHDOG is not set
 
@@ -2534,6 +2535,7 @@ PTXCONF_LIBPOPT=y
 # PTXCONF_LIBTAR is not set
 # PTXCONF_LIBTASN1 is not set
 # PTXCONF_LIBUCDAEMON is not set
+# PTXCONF_LIBUNWIND is not set
 # PTXCONF_LIBURCU is not set
 PTXCONF_LIBUSB_COMPAT=y
 PTXCONF_LIBUSB=y
@@ -2763,6 +2765,7 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_QT4 is not set
 # PTXCONF_QT5 is not set
 # PTXCONF_QWT is not set
+# PTXCONF_QWT5 is not set
 # PTXCONF_SHIBOKEN is not set
 
 #
@@ -2797,6 +2800,8 @@ PTXCONF_GNUPLOT=y
 #
 # PTXCONF_FONTCONFIG is not set
 # PTXCONF_I915RESOLUTION is not set
+# PTXCONF_IMAGEMAGICK is not set
+# PTXCONF_INTEL_GPU_TOOLS is not set
 
 #
 # libs                          
@@ -2842,6 +2847,7 @@ PTXCONF_GNUPLOT=y
 #
 # wayland                       
 #
+# PTXCONF_WAYLAND_PROTOCOLS is not set
 # PTXCONF_WAYLAND is not set
 # PTXCONF_WESTON is not set
 
