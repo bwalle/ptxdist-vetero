@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2016.11.0
+# PTXdist 2016.12.0
 #
 PTXCONF__platformconfig_MAGIC__=y
 
@@ -19,7 +19,7 @@ PTXCONF_PLATFORM="dockstar-update"
 PTXCONF_PLATFORM_VERSION="-2014.12.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
-PTXCONF_PLATFORMCONFIG_VERSION="2016.11.0"
+PTXCONF_PLATFORMCONFIG_VERSION="2016.12.0"
 
 #
 # architecture                  
