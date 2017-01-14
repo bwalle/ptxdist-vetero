@@ -1,7 +1,7 @@
-Index: linux-3.18/arch/arm/boot/dts/kirkwood-dockstar.dts
+Index: linux-4.9/arch/arm/boot/dts/kirkwood-dockstar.dts
 ===================================================================
---- linux-3.18.orig/arch/arm/boot/dts/kirkwood-dockstar.dts
-+++ linux-3.18/arch/arm/boot/dts/kirkwood-dockstar.dts
+--- linux-4.9.orig/arch/arm/boot/dts/kirkwood-dockstar.dts
++++ linux-4.9/arch/arm/boot/dts/kirkwood-dockstar.dts
 @@ -32,6 +32,17 @@
  				marvell,function = "gpio";
  			};
@@ -13,7 +13,7 @@ Index: linux-3.18/arch/arm/boot/dts/kirkwood-dockstar.dts
 +			pinctrl-names = "default";
 +
 +			bmp085: bmp085@77 {
-+				compatible = "bmp085";
++				compatible = "bosch,bmp085";
 +				reg = <0x77>;
 +			};
 +		};
