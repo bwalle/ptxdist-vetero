@@ -2,7 +2,7 @@
 
 usage()
 {
-    echo "Usage: $0 'dockstar'|'dockstar-update'|rpi"
+    echo "Usage: $0 'dockstar'|'dockstar-update'"
 }
 
 case "$1" in
@@ -13,11 +13,6 @@ case "$1" in
 
     dockstar)
         PLATFORMCONFIG=configs/dockstar/platformconfig
-        PTXCONFIG=configs/ptxconfig
-        ;;
-
-    rpi)
-        PLATFORMCONFIG=configs/raspberrypi/platformconfig
         PTXCONFIG=configs/ptxconfig
         ;;
 
