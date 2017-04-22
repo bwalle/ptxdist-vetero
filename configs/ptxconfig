@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2017.03.0
+# PTXdist 2017.04.0
 #
 # PTXCONF_SIMPLEINIT is not set
 PTXCONF_VETERO=y
@@ -61,7 +61,7 @@ PTXCONF_PROJECT_BUILD_DEVEL=y
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
 PTXCONF_VIRTUAL=y
-PTXCONF_CONFIGFILE_VERSION="2017.03.0"
+PTXCONF_CONFIGFILE_VERSION="2017.04.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -189,6 +189,7 @@ PTXCONF_HOST_PYTHON3=y
 # PTXCONF_HOST_QOOXDOO is not set
 # PTXCONF_HOST_QT4 is not set
 # PTXCONF_HOST_QT5 is not set
+# PTXCONF_HOST_RAUC is not set
 # PTXCONF_HOST_SHIBOKEN is not set
 # PTXCONF_HOST_SQUASHFS_TOOLS is not set
 # PTXCONF_HOST_SWIG is not set
@@ -1909,8 +1910,6 @@ PTXCONF_MTD_UTILS_MTDINFO=y
 #
 # PTXCONF_SMARTMONTOOLS is not set
 # PTXCONF_SUDO is not set
-# PTXCONF_SYSTEMD_BOOTCHART is not set
-# PTXCONF_SYSTEMD is not set
 
 #
 # BusyBox' tar is selected!
@@ -1919,7 +1918,7 @@ PTXCONF_MTD_UTILS_MTDINFO=y
 # PTXCONF_TMUX is not set
 # PTXCONF_TREE is not set
 # PTXCONF_U_BOOT_TOOLS is not set
-# PTXCONF_UDEV is not set
+# PTXCONF_UDEV_LEGACY is not set
 
 #
 # udisks conflicts with BusyBox' mount!
@@ -1946,6 +1945,7 @@ PTXCONF_UTIL_LINUX_NG_USES_NCURSES=y
 #
 # BusyBox' dmesg is selected!
 #
+# PTXCONF_UTIL_LINUX_NG_NSENTER is not set
 # PTXCONF_UTIL_LINUX_NG_MOUNTPOINT is not set
 
 #
@@ -2076,7 +2076,6 @@ PTXCONF_PYSERIAL3=y
 # PTXCONF_PYTHON3_PICKLESHARE is not set
 # PTXCONF_PYTHON3_PTYPROCESS is not set
 # PTXCONF_PYTHON3_SIMPLEGENERIC is not set
-# PTXCONF_PYTHON3_SYSTEMD is not set
 # PTXCONF_PYTHON3_TORNADO is not set
 # PTXCONF_PYTHON3_TRAITLETS is not set
 
@@ -2469,6 +2468,7 @@ PTXCONF_E2FSPROGS_INSTALL_MKFS_EXT4=y
 # PTXCONF_GNUPG is not set
 # PTXCONF_LPC21ISP is not set
 # PTXCONF_MYSQL is not set
+# PTXCONF_RAUC is not set
 
 #
 # Editors                       
@@ -2847,7 +2847,9 @@ PTXCONF_GNUPLOT=y
 # PTXCONF_AUDIOFILE is not set
 # PTXCONF_FLAC is not set
 # PTXCONF_FREETYPE is not set
+# PTXCONF_GLMARK2 is not set
 # PTXCONF_GLU is not set
+# PTXCONF_KMSCUBE is not set
 # PTXCONF_LIBAO is not set
 # PTXCONF_LIBCACA is not set
 # PTXCONF_LIBDMTX is not set
