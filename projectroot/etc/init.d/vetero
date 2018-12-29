@@ -181,7 +181,13 @@ wait_for_device()
     local count=0
     local max_wait=10 # seconds
 
-    while ! lsusb | grep -q 'ID 10c4:ea60' && [ "$count" -lt "$max_wait" ] ; do
+    if [ "$VETERO_SENSOR_TYPE" = "freetec" ] ; then
+        usb_device=1941:8021
+    else
+        usb_device=10c4:ea60
+    fi
+
+    while ! lsusb | grep -q "ID ${usb_device}" && [ "$count" -lt "$max_wait" ] ; do
         sleep 1
         count=$(expr $count + 1)
     done
