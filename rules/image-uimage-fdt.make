@@ -11,12 +11,13 @@
 #
 # We provide this package
 #
-SEL_ROOTFS-$(PTXCONF_IMAGE_UIMAGE_FDT) += $(IMAGEDIR)/uImage
+IMAGE_PACKAGES-$(PTXCONF_IMAGE_UIMAGE_FDT) += image-kernel-uimage-fdt
 
 #
 # Paths and names
 #
-IMAGE_UIMAGE_FDT	:= $(IMAGEDIR)/uImage
+IMAGE_UIMAGE_FDT	:= image-kernel-uimage-fdt
+IMAGE_UIMAGE_FDT_IMAGE	:= $(IMAGEDIR)/uImage
 IMAGE_BOOT_VFAT_DIR	:= $(BUILDDIR)/$(IMAGE_BOOT_VFAT)
 IMAGE_BOOT_VFAT_IMAGE	:= $(IMAGEDIR)/boot.vfat
 IMAGE_BOOT_VFAT_DATA	:= \
@@ -32,7 +33,7 @@ IMAGE_BOOT_VFAT_CONFIG	:= boot-vfat.config
 # ----------------------------------------------------------------------------
 
 
-$(IMAGE_UIMAGE_FDT): $(IMAGEDIR)/linuximage $(IMAGEDIR)/kirkwood-dockstar.dtb
+$(IMAGE_UIMAGE_FDT_IMAGE): $(IMAGEDIR)/linuximage $(IMAGEDIR)/kirkwood-dockstar.dtb
 	@$(call targetinfo)
 	@echo "Generating final kernel image including FDT"
 	@(cd $(IMAGEDIR) ; \
