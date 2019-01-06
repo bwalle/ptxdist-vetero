@@ -1,15 +1,23 @@
 ## SECTION=project_specific
 
-config VETERO
+menuconfig VETERO
 	bool
-	prompt "vetero"
+	prompt "vetero                        "
 	select HOST_CMAKE
         select LIBCONFUSE
         select SQLITE
         select ZLIB
-        select SERDISPLIB
+        select SERDISPLIB      if VETERO_DISPLAY
         select READLINE
         select RAPIDJSON
 	help
 	  FIXME
 
+if VETERO
+
+config VETERO_DISPLAY
+       bool "add support for external display using serdisplib"
+
+endif
+
+# vim: set ft=kconfig:
