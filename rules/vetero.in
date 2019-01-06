@@ -9,6 +9,7 @@ config VETERO
         select ZLIB
         select SERDISPLIB
         select READLINE
+        select RAPIDJSON
 	help
 	  FIXME
 
