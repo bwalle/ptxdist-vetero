@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2019.02.0
+# PTXdist 2019.03.0
 #
 # PTXCONF_SIMPLEINIT is not set
 PTXCONF_VETERO=y
@@ -50,7 +50,7 @@ PTXCONF_PROJECT_VERSION="-0.1.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
 PTXCONF_VIRTUAL=y
-PTXCONF_CONFIGFILE_VERSION="2019.02.0"
+PTXCONF_CONFIGFILE_VERSION="2019.03.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -2351,7 +2351,6 @@ PTXCONF_OPENSSL=y
 # PTXCONF_SOCAT is not set
 # PTXCONF_STRONGSWAN is not set
 # PTXCONF_STUNNEL is not set
-# PTXCONF_SYSLOGNG is not set
 # PTXCONF_TCPDUMP is not set
 # PTXCONF_TCPWRAPPER is not set
 # PTXCONF_THTTPD is not set
@@ -2367,11 +2366,6 @@ PTXCONF_OPENSSL=y
 # PTXCONF_WPA_SUPPLICANT is not set
 # PTXCONF_WPAN_TOOLS is not set
 # PTXCONF_ZSYNC is not set
-
-#
-# IPv4 -> IPv6 Transition Tools 
-#
-# PTXCONF_PTRTD is not set
 
 #
 # Disk and File Utilities       
@@ -2523,6 +2517,7 @@ PTXCONF_LIBBLKID=y
 # PTXCONF_LIBCAP_NG is not set
 # PTXCONF_LIBCAP is not set
 # PTXCONF_LIBCGROUP is not set
+# PTXCONF_LIBCONFIG is not set
 PTXCONF_LIBCONFUSE=y
 # PTXCONF_LIBCONFUSE_STATIC is not set
 # PTXCONF_LIBDAEMON is not set
@@ -2940,25 +2935,20 @@ PTXCONF_GNUPLOT=y
 # ------------------------------------
 #
 PTXCONF_STAGING=y
-# PTXCONF_APACHE2 is not set
-# PTXCONF_APACHE2_MOD_PYTHON is not set
-# PTXCONF_APR_UTIL is not set
-# PTXCONF_APR is not set
 # PTXCONF_ARORA is not set
-# PTXCONF_DCONF is not set
 # PTXCONF_FAM is not set
 # PTXCONF_GLADE is not set
 # PTXCONF_GLADEMM is not set
-# PTXCONF_GMAKE is not set
 # PTXCONF_GPM is not set
 # PTXCONF_GTKMM is not set
 # PTXCONF_IRSSI is not set
 # PTXCONF_JS is not set
-# PTXCONF_LIBCONFIG is not set
 # PTXCONF_LIBQXT is not set
 # PTXCONF_PEKWM is not set
+# PTXCONF_PTRTD is not set
 # PTXCONF_RXTX is not set
 # PTXCONF_SUN_JAVA6_JRE is not set
+# PTXCONF_SYSLOGNG is not set
 # PTXCONF_TCL is not set
 # PTXCONF_TK is not set
 # PTXCONF_TOTD is not set
