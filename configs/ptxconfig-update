@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2019.03.1
+# PTXdist 2019.04.0
 #
 PTXCONF_SIMPLEINIT=y
 # PTXCONF_VETERO is not set
@@ -49,7 +49,7 @@ PTXCONF_PROJECT_VERSION="-0.1.0"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
 PTXCONF_VIRTUAL=y
-PTXCONF_CONFIGFILE_VERSION="2019.03.1"
+PTXCONF_CONFIGFILE_VERSION="2019.04.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -1947,6 +1947,7 @@ PTXCONF_ATTR=y
 # PTXCONF_INOTIFY_TOOLS is not set
 # PTXCONF_JANSSON is not set
 # PTXCONF_JSON_C is not set
+# PTXCONF_JSONCPP is not set
 # PTXCONF_LCMS is not set
 # PTXCONF_LIBAIO is not set
 # PTXCONF_LIBARCHIVE is not set
@@ -2219,6 +2220,7 @@ PTXCONF_ZLIB=y
 #
 # qt                            
 #
+# PTXCONF_BLUEZ_QT is not set
 # PTXCONF_PYSIDE is not set
 # PTXCONF_PYTHON3_PYSIDE is not set
 # PTXCONF_PYTHON3_SHIBOKEN is not set
