@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# PTXdist 2019.04.0
+# PTXdist 2019.05.0
 #
 PTXCONF_SIMPLEINIT=y
 # PTXCONF_VETERO is not set
@@ -46,10 +46,26 @@ PTXCONF_PROJECT_VERSION="-0.1.0"
 # ------------------------------------
 #
 # PTXCONF_PROJECT_CHECK_LICENSES is not set
+
+#
+# ------------------------------------
+#
+
+#
+# reproducible builds
+#
+
+#
+# ------------------------------------
+#
+PTXCONF_REPRODUCIBLE_TIMESTAMP_PTXDIST=y
+# PTXCONF_REPRODUCIBLE_TIMESTAMP_TOOLCHAIN is not set
+# PTXCONF_REPRODUCIBLE_TIMESTAMP_CUSTOM is not set
+PTXCONF_REPRODUCIBLE_TIMESTAMP="ptxdist"
 PTXCONF_RUNTIME=y
 PTXCONF_BUILDTIME=y
 PTXCONF_VIRTUAL=y
-PTXCONF_CONFIGFILE_VERSION="2019.04.0"
+PTXCONF_CONFIGFILE_VERSION="2019.05.0"
 PTXCONF__ptxconfig_MAGIC__=y
 
 #
@@ -126,6 +142,7 @@ PTXCONF_CROSS_PKG_CONFIG_WRAPPER=y
 # PTXCONF_MEMTESTER is not set
 # PTXCONF_OPENOCD is not set
 # PTXCONF_OPROFILE is not set
+# PTXCONF_PLY is not set
 
 #
 # BusyBox' powertop is selected!
@@ -299,6 +316,7 @@ PTXCONF_LIBC_NSS_DNS=y
 PTXCONF_LIBC_NSS_FILES=y
 # PTXCONF_LOCALES is not set
 # PTXCONF_TIMEZONE is not set
+# PTXCONF_USBIP is not set
 
 #
 # ------------------------------------
@@ -1907,6 +1925,7 @@ PTXCONF_ATTR=y
 #
 # PTXCONF_CUPS_FILTERS is not set
 # PTXCONF_CUPS is not set
+# PTXCONF_FFMPEG is not set
 # PTXCONF_GNUPG is not set
 # PTXCONF_LPC21ISP is not set
 # PTXCONF_MYSQLDB is not set
@@ -2019,6 +2038,7 @@ PTXCONF_ATTR=y
 # PTXCONF_LIBUSB is not set
 PTXCONF_LIBUUID=y
 # PTXCONF_LIBUV is not set
+# PTXCONF_LIBWEBP is not set
 # PTXCONF_LIBX86 is not set
 # PTXCONF_LIBXML2 is not set
 # PTXCONF_LIBXMLCONFIG is not set
@@ -2135,6 +2155,7 @@ PTXCONF_ZLIB=y
 # PTXCONF_IOZONE is not set
 # PTXCONF_IPERF is not set
 # PTXCONF_IPERF3 is not set
+# PTXCONF_LINUX_SERIAL_TEST is not set
 # PTXCONF_LMBENCH is not set
 # PTXCONF_MBW is not set
 # PTXCONF_PELTS_TESTS is not set
@@ -2273,6 +2294,7 @@ PTXCONF_ZLIB=y
 # PTXCONF_IMAGEMAGICK is not set
 # PTXCONF_LIBVA_UTILS is not set
 # PTXCONF_QRENCODE is not set
+# PTXCONF_UVC_GADGET is not set
 
 #
 # libs                          
@@ -2294,6 +2316,7 @@ PTXCONF_ZLIB=y
 # PTXCONF_LIBEVDEV is not set
 # PTXCONF_LIBINPUT is not set
 # PTXCONF_LIBMPEG2 is not set
+# PTXCONF_LIBNICE is not set
 # PTXCONF_LIBOGG is not set
 # PTXCONF_LIBPAPER is not set
 # PTXCONF_LIBPCIACCESS is not set
@@ -2331,6 +2354,7 @@ PTXCONF_ZLIB=y
 # PTXCONF_WAYLAND_PROTOCOLS is not set
 # PTXCONF_WAYLAND is not set
 # PTXCONF_WESTON is not set
+# PTXCONF_WLROOTS is not set
 
 #
 # ------------------------------------
