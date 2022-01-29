@@ -125,6 +125,22 @@ generate_configuration()
         echo >>"$TEMP_CONFIGURATION" "pressure_height=$VETERO_PRESSURE_HEIGHT"
     fi
 
+    #
+    # cloud configuration
+    #
+
+    if [ -n "$VETERO_CLOUD_TYPE" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "cloud_type=$VETERO_CLOUD_TYPE"
+    fi
+
+    if [ -n "$VETERO_CLOUD_STATION_ID" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "cloud_station_id=$VETERO_CLOUD_STATION_ID"
+    fi
+
+    if [ -n "$VETERO_CLOUD_STATION_PASSWORD" ] ; then
+        echo >>"$TEMP_CONFIGURATION" "cloud_station_password=$VETERO_CLOUD_STATION_PASSWORD"
+    fi
+
     # symlink /etc/veterorc and add some reliability to not overwrite custom
     # configurations
     if ! [ -h "$VETERO_SYSWIDE_CONFIG" ] ; then
